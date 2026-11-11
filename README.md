@@ -78,12 +78,12 @@
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=angkon101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Angkon's GitHub stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=angkon101&layout=compact&theme=tokyonight&hide_border=true" alt="Top Langs" height="165" />
+  <img src="https://github-stats-extended.vercel.app/api?username=angkon101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Angkon's GitHub stats" height="165" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=angkon101&layout=compact&theme=tokyonight&hide_border=true" alt="Top Langs" height="165" />
 </div>
 
 <div align="center" style="margin-top: 10px;">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=angkon101&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=angkon101&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 
 ---
