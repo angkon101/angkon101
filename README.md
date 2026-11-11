@@ -97,6 +97,14 @@
   </div>
 </details>
 
+<details>
+  <summary><b>🍩 Interactive Language Donut Breakdown (Click to Expand)</b></summary>
+  <br/>
+  <div align="center">
+    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=angkon101&layout=donut&theme=tokyonight&hide_border=true" alt="Top Languages Donut" height="190" />
+  </div>
+</details>
+
 ---
 
 ### 🌟 Featured Repositories
@@ -108,6 +116,22 @@
 | 🧠 **[Early-Brain-Tumor-Detection](https://github.com/angkon101/Early-Brain-Tumor-Detection)** | Deep learning medical image classification model | Python / ML / Deep Learning |
 | 📱 **[demo_currency_app](https://github.com/angkon101/demo_currency_app)** | Cross-platform mobile currency exchange converter | Flutter / Dart |
 | 🍽️ **[Restaurant-POS](https://github.com/angkon101/Restaurant-POS)** | Point-of-Sale management system for restaurants | Fullstack Web |
+
+---
+
+### 🌐 Connect & Collaborate
+
+<p align="center">
+  <a href="https://bohuvuj.com" target="_blank">
+    <img src="https://img.shields.io/badge/Company-Bohuvuj.com-0052cc?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Bohuvuj Website" />
+  </a>
+  <a href="https://github.com/angkon101" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-@angkon101-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
+  <a href="https://linkedin.com/in/angkon101" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</p>
 
 ---
 
