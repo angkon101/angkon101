@@ -404,15 +404,15 @@
   <rect x="334" y="68" width="10" height="10" class="empty" />
   <rect x="334" y="82" width="10" height="10" class="empty" />
   <rect x="334" y="96" width="10" height="10" class="empty" />
-  <rect x="334" y="110" width="10" height="10" class="lvl1" />
+  <rect x="334" y="110" width="10" height="10" class="empty" />
   <rect x="334" y="124" width="10" height="10" class="lvl1" />
   <rect x="348" y="40" width="10" height="10" class="empty" />
   <rect x="348" y="54" width="10" height="10" class="empty" />
   <rect x="348" y="68" width="10" height="10" class="empty" />
-  <rect x="348" y="82" width="10" height="10" class="lvl1" />
-  <rect x="348" y="96" width="10" height="10" class="lvl1" />
-  <rect x="348" y="110" width="10" height="10" class="lvl1" />
-  <rect x="348" y="124" width="10" height="10" class="lvl1" />
+  <rect x="348" y="82" width="10" height="10" class="empty" />
+  <rect x="348" y="96" width="10" height="10" class="empty" />
+  <rect x="348" y="110" width="10" height="10" class="empty" />
+  <rect x="348" y="124" width="10" height="10" class="empty" />
   <rect x="362" y="40" width="10" height="10" class="empty" />
   <rect x="362" y="54" width="10" height="10" class="empty" />
   <rect x="362" y="68" width="10" height="10" class="empty" />
@@ -425,7 +425,7 @@
   <rect x="376" y="68" width="10" height="10" class="empty" />
   <rect x="376" y="82" width="10" height="10" class="empty" />
   <rect x="376" y="96" width="10" height="10" class="empty" />
-  <rect x="376" y="110" width="10" height="10" class="lvl1" />
+  <rect x="376" y="110" width="10" height="10" class="empty" />
   <rect x="376" y="124" width="10" height="10" class="empty" />
   <rect x="390" y="40" width="10" height="10" class="empty" />
   <rect x="390" y="54" width="10" height="10" class="empty" />
@@ -460,9 +460,9 @@
   <rect x="446" y="68" width="10" height="10" class="empty" />
   <rect x="446" y="82" width="10" height="10" class="empty" />
   <rect x="446" y="96" width="10" height="10" class="empty" />
-  <rect x="446" y="110" width="10" height="10" class="lvl2" />
-  <rect x="446" y="124" width="10" height="10" class="lvl1" />
-  <rect x="460" y="40" width="10" height="10" class="lvl1" />
+  <rect x="446" y="110" width="10" height="10" class="lvl1" />
+  <rect x="446" y="124" width="10" height="10" class="empty" />
+  <rect x="460" y="40" width="10" height="10" class="empty" />
   <rect x="460" y="54" width="10" height="10" class="empty" />
   <rect x="460" y="68" width="10" height="10" class="empty" />
   <rect x="460" y="82" width="10" height="10" class="empty" />
@@ -473,8 +473,8 @@
   <rect x="474" y="54" width="10" height="10" class="lvl1" />
   <rect x="474" y="68" width="10" height="10" class="empty" />
   <rect x="474" y="82" width="10" height="10" class="empty" />
-  <rect x="474" y="96" width="10" height="10" class="lvl3" />
-  <rect x="474" y="110" width="10" height="10" class="lvl2" />
+  <rect x="474" y="96" width="10" height="10" class="lvl2" />
+  <rect x="474" y="110" width="10" height="10" class="lvl1" />
   <rect x="474" y="124" width="10" height="10" class="empty" />
   <rect x="488" y="40" width="10" height="10" class="lvl3" />
   <rect x="488" y="54" width="10" height="10" class="lvl1" />
@@ -548,9 +548,9 @@
   <rect x="614" y="124" width="10" height="10" class="empty" />
   <rect x="628" y="40" width="10" height="10" class="empty" />
   <rect x="628" y="54" width="10" height="10" class="empty" />
-  <rect x="628" y="68" width="10" height="10" class="lvl2" />
-  <rect x="628" y="82" width="10" height="10" class="lvl2" />
-  <rect x="628" y="96" width="10" height="10" class="lvl4" />
+  <rect x="628" y="68" width="10" height="10" class="lvl1" />
+  <rect x="628" y="82" width="10" height="10" class="lvl1" />
+  <rect x="628" y="96" width="10" height="10" class="lvl3" />
   <rect x="628" y="110" width="10" height="10" class="empty" />
   <rect x="628" y="124" width="10" height="10" class="empty" />
   <rect x="642" y="40" width="10" height="10" class="empty" />
@@ -563,7 +563,7 @@
   <rect x="656" y="40" width="10" height="10" class="lvl2" />
   <rect x="656" y="54" width="10" height="10" class="empty" />
   <rect x="656" y="68" width="10" height="10" class="empty" />
-  <rect x="656" y="82" width="10" height="10" class="lvl3" />
+  <rect x="656" y="82" width="10" height="10" class="lvl2" />
   <rect x="656" y="96" width="10" height="10" class="empty" />
   <rect x="656" y="110" width="10" height="10" class="lvl1" />
   <rect x="656" y="124" width="10" height="10" class="empty" />
@@ -655,17 +655,17 @@
       <use href="#coin" x="0" y="0" />
     </g>
   </g>
+  <g transform="translate(390, 95)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,-20; 0,-20" keyTimes="0;0.449;0.479;1" dur="20s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.449;0.479;1" dur="20s" repeatCount="indefinite" />
+      <use href="#coin" x="0" y="0" />
+    </g>
+  </g>
   <g transform="translate(572, 95)">
     <g>
       <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,-20; 0,-20" keyTimes="0;0.664;0.694;1" dur="20s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.664;0.694;1" dur="20s" repeatCount="indefinite" />
-      <use href="#coin" x="0" y="0" />
-    </g>
-  </g>
-  <g transform="translate(628, 84)">
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,-20; 0,-20" keyTimes="0;0.730;0.760;1" dur="20s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.730;0.760;1" dur="20s" repeatCount="indefinite" />
       <use href="#coin" x="0" y="0" />
     </g>
   </g>
@@ -689,7 +689,7 @@
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,93; 0,93" keyTimes="0;0.929;0.979;1" dur="20s" repeatCount="indefinite" />
     <polygon points="782,35 797,35 797,45" fill="#00A800" stroke="#000"/>
   </g>
-  <path id="parkour-path" d="M 14 138 L 14 94  Q 27.0 69 40 124 L 54 124 L 68 124 Q 75.0 74 82 99 Q 89.0 74 96 124 L 110 124 L 124 124 Q 131.0 74 138 99 Q 145.0 74 152 124 L 166 124 L 180 124 Q 187.0 74 194 99 Q 201.0 74 208 124 L 222 124 L 236 124 Q 243.0 74 250 99 Q 257.0 74 264 124 L 278 124 L 292 124 Q 299.0 74 306 99 Q 313.0 74 320 124 Q 327.0 71 334 96 Q 341.0 43 348 68 Q 355.0 43 362 124 Q 369.0 71 376 96 Q 383.0 71 390 124 Q 397.0 85 404 110 Q 411.0 85 418 124 L 432 124 Q 439.0 71 446 96 Q 453.0 1 460 26 Q 467.0 1 474 40 Q 481.0 1 488 26 Q 495.0 1 502 124 Q 509.0 43 516 68 Q 523.0 43 530 124 L 544 124 L 558 124 Q 565.0 74 572 99 Q 579.0 74 586 124 Q 593.0 1 600 26 Q 607.0 1 614 124 Q 621.0 29 628 54 Q 635.0 29 642 124 Q 649.0 1 656 26 Q 663.0 1 670 124 L 684 124 Q 691.0 43 698 68 Q 705.0 43 712 124 L 726 124 L 740 124 Q 747.0 29 754 54 Q 761.0 1 768 26 Q 778 6 793 40  L 793 124  L 847 124 " fill="none" stroke="none" />
+  <path id="parkour-path" d="M 14 138 L 14 94  Q 27.0 69 40 124 L 54 124 L 68 124 Q 75.0 74 82 99 Q 89.0 74 96 124 L 110 124 L 124 124 Q 131.0 74 138 99 Q 145.0 74 152 124 L 166 124 L 180 124 Q 187.0 74 194 99 Q 201.0 74 208 124 L 222 124 L 236 124 Q 243.0 74 250 99 Q 257.0 74 264 124 L 278 124 L 292 124 Q 299.0 74 306 99 Q 313.0 74 320 124 Q 327.0 85 334 110 Q 341.0 85 348 124 L 362 124 L 376 124 Q 383.0 74 390 99 Q 397.0 74 404 110 Q 411.0 85 418 124 L 432 124 Q 439.0 71 446 96 Q 453.0 71 460 124 Q 467.0 15 474 40 Q 481.0 1 488 26 Q 495.0 1 502 124 Q 509.0 43 516 68 Q 523.0 43 530 124 L 544 124 L 558 124 Q 565.0 74 572 99 Q 579.0 74 586 124 Q 593.0 1 600 26 Q 607.0 1 614 124 Q 621.0 29 628 54 Q 635.0 29 642 124 Q 649.0 1 656 26 Q 663.0 1 670 124 L 684 124 Q 691.0 43 698 68 Q 705.0 43 712 124 L 726 124 L 740 124 Q 747.0 29 754 54 Q 761.0 1 768 26 Q 778 6 793 40  L 793 124  L 847 124 " fill="none" stroke="none" />
   <use href="#mario">
     <animateMotion dur="20s" repeatCount="indefinite"><mpath href="#parkour-path"/></animateMotion>
   </use>
