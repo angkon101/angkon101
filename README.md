@@ -65,6 +65,16 @@
 
 ---
 
+### 🎮 Mario Contribution Adventure
+
+<div align="center">
+  <a href="https://github.com/angkon101">
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/mario_contribution.svg" alt="Mario Playing on Contribution Graph" width="100%" />
+  </a>
+</div>
+
+---
+
 ### 📊 GitHub Analytics
 
 <div align="center">
