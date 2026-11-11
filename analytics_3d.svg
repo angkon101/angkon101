@@ -1,0 +1,289 @@
+<svg width="880" height="420" viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0c1222" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+    <linearGradient id="grid-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.0" />
+    </linearGradient>
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0072ff" />
+    </linearGradient>
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e056fd" />
+      <stop offset="100%" stop-color="#6827b0" />
+    </linearGradient>
+    <linearGradient id="neon-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9ca24" />
+      <stop offset="100%" stop-color="#f0932b" />
+    </linearGradient>
+    <linearGradient id="neon-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ed573" />
+      <stop offset="100%" stop-color="#10ac84" />
+    </linearGradient>
+    <linearGradient id="neon-coral" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4757" />
+      <stop offset="100%" stop-color="#ff6b81" />
+    </linearGradient>
+    <!-- Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 14px; font-weight: 700; fill: #00f0ff; letter-spacing: 2px; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #8b9bb4; }
+    .metric-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 15px; font-weight: 800; fill: #ffffff; }
+    .metric-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 9px; fill: #00f0ff; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; }
+    .hud-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace; font-size: 10px; fill: #a5b4fc; }
+    .hud-bold { font-weight: 700; fill: #ffffff; }
+    .hud-accent { fill: #00f0ff; font-weight: 600; }
+    .grid-line { stroke: #1e293b; stroke-width: 1; stroke-opacity: 0.6; }
+    .iso-axis { stroke: #00f0ff; stroke-width: 1.2; stroke-dasharray: 4,4; stroke-opacity: 0.4; }
+    .hud-box { fill: rgba(15, 23, 42, 0.75); stroke: rgba(56, 189, 248, 0.25); stroke-width: 1; rx: 8; backdrop-filter: blur(8px); }
+    @keyframes pulseGlow { 0% { opacity: 0.4; } 50% { opacity: 0.9; } 100% { opacity: 0.4; } }
+    @keyframes floatUp { 0% { transform: translateY(0px); } 50% { transform: translateY(-7px); } 100% { transform: translateY(0px); } }
+    @keyframes spinRing { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes scanline { 0% { transform: translateY(0px); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(400px); opacity: 0; } }
+    .floating-ring { animation: floatUp 3s ease-in-out infinite; }
+    .pulsing-node { animation: pulseGlow 2.5s ease-in-out infinite; }
+  </style>
+  <!-- Background -->
+  <rect width="880" height="420" fill="url(#bg-grad)" rx="12" stroke="#1f293d" stroke-width="1.5" />
+  <!-- Cyberpunk Scanline -->
+  <line x1="10" y1="20" x2="870" y2="20" stroke="#00f0ff" stroke-width="1" opacity="0.15">
+    <animate attributeName="y1" values="20;400;20" dur="8s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="20;400;20" dur="8s" repeatCount="indefinite" />
+  </line>
+  <!-- 3D Isometric Grid Floor -->
+  <g class="grid-layer">
+    <line x1="450.0" y1="85.0" x2="86.3" y2="295.0" class="grid-line" />
+    <line x1="450.0" y1="85.0" x2="813.7" y2="295.0" class="grid-line" />
+    <line x1="486.4" y1="106.0" x2="122.6" y2="316.0" class="grid-line" />
+    <line x1="413.6" y1="106.0" x2="777.4" y2="316.0" class="grid-line" />
+    <line x1="522.7" y1="127.0" x2="159.0" y2="337.0" class="grid-line" />
+    <line x1="377.3" y1="127.0" x2="741.0" y2="337.0" class="grid-line" />
+    <line x1="559.1" y1="148.0" x2="195.4" y2="358.0" class="grid-line" />
+    <line x1="340.9" y1="148.0" x2="704.6" y2="358.0" class="grid-line" />
+    <line x1="595.5" y1="169.0" x2="231.8" y2="379.0" class="grid-line" />
+    <line x1="304.5" y1="169.0" x2="668.2" y2="379.0" class="grid-line" />
+    <line x1="631.9" y1="190.0" x2="268.1" y2="400.0" class="grid-line" />
+    <line x1="268.1" y1="190.0" x2="631.9" y2="400.0" class="grid-line" />
+    <line x1="668.2" y1="211.0" x2="304.5" y2="421.0" class="grid-line" />
+    <line x1="231.8" y1="211.0" x2="595.5" y2="421.0" class="grid-line" />
+    <line x1="704.6" y1="232.0" x2="340.9" y2="442.0" class="grid-line" />
+    <line x1="195.4" y1="232.0" x2="559.1" y2="442.0" class="grid-line" />
+    <line x1="741.0" y1="253.0" x2="377.3" y2="463.0" class="grid-line" />
+    <line x1="159.0" y1="253.0" x2="522.7" y2="463.0" class="grid-line" />
+    <line x1="777.4" y1="274.0" x2="413.6" y2="484.0" class="grid-line" />
+    <line x1="122.6" y1="274.0" x2="486.4" y2="484.0" class="grid-line" />
+    <line x1="813.7" y1="295.0" x2="450.0" y2="505.0" class="grid-line" />
+    <line x1="86.3" y1="295.0" x2="450.0" y2="505.0" class="grid-line" />
+  </g>
+  <!-- 3D Pillars -->
+  <!-- Python & ML floor shadow -->
+  <polygon points="372.1,210.0 405.0,229.0 372.1,248.0 339.1,229.0" fill="rgba(0,0,0,0.5)" filter="url(#glow-soft)" />
+  <polygon points="339.1,229.0 372.1,248.0 372.1,113.0 339.1,94.0" fill="#3b1c6e" stroke="#9d4edd" stroke-width="0.8" />
+  <polygon points="372.1,248.0 405.0,229.0 405.0,94.0 372.1,113.0" fill="#5c2d91" stroke="#9d4edd" stroke-width="0.8" />
+  <polygon points="372.1,75.0 405.0,94.0 372.1,113.0 339.1,94.0" fill="url(#neon-purple)" stroke="#e0aaff" stroke-width="1.2" />
+  <!-- Halo for Python & ML -->
+  <g transform="translate(0, 0)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="3s" begin="0.0s" repeatCount="indefinite" />
+      <ellipse cx="372.1" cy="82.0" rx="22" ry="10" fill="none" stroke="#e056fd" stroke-width="1.4" opacity="0.8" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite" />
+      </ellipse>
+      <circle cx="372.1" cy="82.0" r="3" fill="#e056fd" filter="url(#glow-cyan)" />
+      <text x="372.1" y="66.0" text-anchor="middle" class="metric-val" fill="#e056fd">5 Repos</text>
+      <text x="372.1" y="52.0" text-anchor="middle" class="metric-lbl">Python & ML</text>
+    </g>
+  </g>
+  <!-- Flutter & Dart floor shadow -->
+  <polygon points="411.0,252.5 443.9,271.5 411.0,290.5 378.1,271.5" fill="rgba(0,0,0,0.5)" filter="url(#glow-soft)" />
+  <polygon points="378.1,271.5 411.0,290.5 411.0,175.5 378.1,156.5" fill="#0d3b66" stroke="#00b4d8" stroke-width="0.8" />
+  <polygon points="411.0,290.5 443.9,271.5 443.9,156.5 411.0,175.5" fill="#1d5a91" stroke="#00b4d8" stroke-width="0.8" />
+  <polygon points="411.0,137.5 443.9,156.5 411.0,175.5 378.1,156.5" fill="url(#neon-cyan)" stroke="#90e0ef" stroke-width="1.2" />
+  <!-- Halo for Flutter & Dart -->
+  <g transform="translate(0, 0)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="3s" begin="0.4s" repeatCount="indefinite" />
+      <ellipse cx="411.0" cy="144.5" rx="22" ry="10" fill="none" stroke="#00f0ff" stroke-width="1.4" opacity="0.8" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite" />
+      </ellipse>
+      <circle cx="411.0" cy="144.5" r="3" fill="#00f0ff" filter="url(#glow-cyan)" />
+      <text x="411.0" y="128.5" text-anchor="middle" class="metric-val" fill="#00f0ff">2 Apps</text>
+      <text x="411.0" y="114.5" text-anchor="middle" class="metric-lbl">Flutter & Dart</text>
+    </g>
+  </g>
+  <!-- TypeScript floor shadow -->
+  <polygon points="454.3,297.5 487.2,316.5 454.3,335.5 421.4,316.5" fill="rgba(0,0,0,0.5)" filter="url(#glow-soft)" />
+  <polygon points="421.4,316.5 454.3,335.5 454.3,180.5 421.4,161.5" fill="#594406" stroke="#ffc107" stroke-width="0.8" />
+  <polygon points="454.3,335.5 487.2,316.5 487.2,161.5 454.3,180.5" fill="#856404" stroke="#ffc107" stroke-width="0.8" />
+  <polygon points="454.3,142.5 487.2,161.5 454.3,180.5 421.4,161.5" fill="url(#neon-gold)" stroke="#ffea79" stroke-width="1.2" />
+  <!-- Halo for TypeScript -->
+  <g transform="translate(0, 0)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="3s" begin="0.8s" repeatCount="indefinite" />
+      <ellipse cx="454.3" cy="149.5" rx="22" ry="10" fill="none" stroke="#f9ca24" stroke-width="1.4" opacity="0.8" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite" />
+      </ellipse>
+      <circle cx="454.3" cy="149.5" r="3" fill="#f9ca24" filter="url(#glow-cyan)" />
+      <text x="454.3" y="133.5" text-anchor="middle" class="metric-val" fill="#f9ca24">4 Repos</text>
+      <text x="454.3" y="119.5" text-anchor="middle" class="metric-lbl">TypeScript</text>
+    </g>
+  </g>
+  <!-- Total Repos floor shadow -->
+  <polygon points="497.6,342.5 530.5,361.5 497.6,380.5 464.7,361.5" fill="rgba(0,0,0,0.5)" filter="url(#glow-soft)" />
+  <polygon points="464.7,361.5 497.6,380.5 497.6,205.5 464.7,186.5" fill="#0f4c3a" stroke="#2ed573" stroke-width="0.8" />
+  <polygon points="497.6,380.5 530.5,361.5 530.5,186.5 497.6,205.5" fill="#167357" stroke="#2ed573" stroke-width="0.8" />
+  <polygon points="497.6,167.5 530.5,186.5 497.6,205.5 464.7,186.5" fill="url(#neon-green)" stroke="#7bed9f" stroke-width="1.2" />
+  <!-- Halo for Total Repos -->
+  <g transform="translate(0, 0)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="3s" begin="1.2000000000000002s" repeatCount="indefinite" />
+      <ellipse cx="497.6" cy="174.5" rx="22" ry="10" fill="none" stroke="#2ed573" stroke-width="1.4" opacity="0.8" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite" />
+      </ellipse>
+      <circle cx="497.6" cy="174.5" r="3" fill="#2ed573" filter="url(#glow-cyan)" />
+      <text x="497.6" y="158.5" text-anchor="middle" class="metric-val" fill="#2ed573">24</text>
+      <text x="497.6" y="144.5" text-anchor="middle" class="metric-lbl">Total Repos</text>
+    </g>
+  </g>
+  <!-- Bohuvuj Impact floor shadow -->
+  <polygon points="540.9,387.5 573.8,406.5 540.9,425.5 508.0,406.5" fill="rgba(0,0,0,0.5)" filter="url(#glow-soft)" />
+  <polygon points="508.0,406.5 540.9,425.5 540.9,235.5 508.0,216.5" fill="#54121a" stroke="#ff4757" stroke-width="0.8" />
+  <polygon points="540.9,425.5 573.8,406.5 573.8,216.5 540.9,235.5" fill="#7d1e28" stroke="#ff4757" stroke-width="0.8" />
+  <polygon points="540.9,197.5 573.8,216.5 540.9,235.5 508.0,216.5" fill="url(#neon-coral)" stroke="#ff7a8a" stroke-width="1.2" />
+  <!-- Halo for Bohuvuj Impact -->
+  <g transform="translate(0, 0)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="3s" begin="1.6s" repeatCount="indefinite" />
+      <ellipse cx="540.9" cy="204.5" rx="22" ry="10" fill="none" stroke="#ff4757" stroke-width="1.4" opacity="0.8" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite" />
+      </ellipse>
+      <circle cx="540.9" cy="204.5" r="3" fill="#ff4757" filter="url(#glow-cyan)" />
+      <text x="540.9" y="188.5" text-anchor="middle" class="metric-val" fill="#ff4757">CEO / Founder</text>
+      <text x="540.9" y="174.5" text-anchor="middle" class="metric-lbl">Bohuvuj Impact</text>
+    </g>
+  </g>
+  <!-- Top HUD Status -->
+  <g transform="translate(30, 32)">
+    <circle cx="6" cy="6" r="4" fill="#00f0ff" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="18" y="10" class="title">3D LIVE ANALYTICS ENGINE // V2.6</text>
+    <text x="18" y="26" class="subtitle">ENGINEERING PORTFOLIO TELEMETRY &bull; ANGKON NATH (@angkon101)</text>
+  </g>
+  <!-- Left HUD Glass Panel -->
+  <rect x="30" y="75" width="180" height="200" class="hud-box" />
+  <g transform="translate(45, 98)">
+    <text x="0" y="0" class="hud-accent" font-size="11">SYSTEM TELEMETRY</text>
+    <line x1="0" y1="8" x2="150" y2="8" stroke="rgba(56,189,248,0.2)" stroke-width="1" />
+    <text x="0" y="28" class="hud-text">STATUS: <tspan class="hud-accent">ACTIVE</tspan></text>
+    <text x="0" y="48" class="hud-text">PRIMARY: <tspan class="hud-bold">FULLSTACK &amp; ML</tspan></text>
+    <text x="0" y="68" class="hud-text">VENTURE: <tspan class="hud-bold">Bohuvuj.com</tspan></text>
+    <text x="0" y="88" class="hud-text">LOCATION: <tspan class="hud-bold">Dhaka, BD</tspan></text>
+    <text x="0" y="108" class="hud-text">TOTAL REPOS: <tspan class="hud-accent">24+</tspan></text>
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="10;28;14;10" dur="1.2s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-6;0" dur="1.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="12" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="12;24;19;12" dur="1.5s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-4;0" dur="1.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="24" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="14;20;24;14" dur="1.7999999999999998s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-2;0" dur="1.7999999999999998s" repeatCount="indefinite" />
+      </rect>
+      <rect x="36" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="16;16;14;16" dur="2.0999999999999996s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-6;0" dur="2.0999999999999996s" repeatCount="indefinite" />
+      </rect>
+      <rect x="48" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="18;28;19;18" dur="1.2s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-4;0" dur="1.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="60" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="20;24;24;20" dur="1.5s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-2;0" dur="1.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="72" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="22;20;14;22" dur="1.7999999999999998s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-6;0" dur="1.7999999999999998s" repeatCount="indefinite" />
+      </rect>
+      <rect x="84" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="24;16;19;24" dur="2.0999999999999996s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-4;0" dur="2.0999999999999996s" repeatCount="indefinite" />
+      </rect>
+      <rect x="96" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="26;28;24;26" dur="1.2s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-2;0" dur="1.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="108" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="28;24;14;28" dur="1.5s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-6;0" dur="1.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="120" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="30;20;19;30" dur="1.7999999999999998s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-4;0" dur="1.7999999999999998s" repeatCount="indefinite" />
+      </rect>
+      <rect x="132" y="0" width="6" height="20" fill="#00f0ff" rx="2" opacity="0.7">
+        <animate attributeName="height" values="32;16;24;32" dur="2.0999999999999996s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;-2;0" dur="2.0999999999999996s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  <!-- Right HUD Glass Panel -->
+  <rect x="670" y="75" width="180" height="200" class="hud-box" />
+  <g transform="translate(685, 98)">
+    <text x="0" y="0" class="hud-accent" font-size="11">STACK PROFICIENCY</text>
+    <line x1="0" y1="8" x2="150" y2="8" stroke="rgba(56,189,248,0.2)" stroke-width="1" />
+    <text x="0" y="28" class="hud-text">Flutter / Mobile</text>
+    <text x="150" y="28" text-anchor="end" class="hud-bold" fill="#00f0ff">95%</text>
+    <rect x="0" y="34" width="150" height="4" fill="rgba(255,255,255,0.1)" rx="2" />
+    <rect x="0" y="34" width="142" height="4" fill="#00f0ff" rx="2">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="0" y="62" class="hud-text">Python / AI / ML</text>
+    <text x="150" y="62" text-anchor="end" class="hud-bold" fill="#e056fd">92%</text>
+    <rect x="0" y="68" width="150" height="4" fill="rgba(255,255,255,0.1)" rx="2" />
+    <rect x="0" y="68" width="138" height="4" fill="#e056fd" rx="2">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="0" y="96" class="hud-text">TypeScript / React</text>
+    <text x="150" y="96" text-anchor="end" class="hud-bold" fill="#f9ca24">88%</text>
+    <rect x="0" y="102" width="150" height="4" fill="rgba(255,255,255,0.1)" rx="2" />
+    <rect x="0" y="102" width="132" height="4" fill="#f9ca24" rx="2">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="0" y="130" class="hud-text">Backend & Cloud</text>
+    <text x="150" y="130" text-anchor="end" class="hud-bold" fill="#2ed573">85%</text>
+    <rect x="0" y="136" width="150" height="4" fill="rgba(255,255,255,0.1)" rx="2" />
+    <rect x="0" y="136" width="127" height="4" fill="#2ed573" rx="2">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <!-- Bottom Cyber Ticker -->
+  <g transform="translate(30, 402)">
+    <text class="hud-text" font-size="10" fill="#475569">
+      [▲ DATA STREAM ONLINE] &bull; ARCHITECTURE: SCALABLE &bull; HIGH PERFORMANCE COMPUTING &bull; AUTO-SYNC
+    </text>
+  </g>
+  <g transform="translate(670, 402)">
+    <text class="hud-accent" font-size="10" text-anchor="start">
+      INTERACTIVE 3D PROJECTION
+    </text>
+  </g>
+</svg>

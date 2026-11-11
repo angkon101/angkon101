@@ -75,16 +75,27 @@
 
 ---
 
-### 📊 GitHub Analytics
+### 📊 3D Interactive Analytics Console
 
 <div align="center">
-  <img src="https://github-stats-extended.vercel.app/api?username=angkon101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Angkon's GitHub stats" height="165" />
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=angkon101&layout=compact&theme=tokyonight&hide_border=true" alt="Top Langs" height="165" />
+  <a href="https://github.com/angkon101">
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/analytics_3d.svg" alt="3D Isometric Analytics Console" width="100%" />
+  </a>
 </div>
 
-<div align="center" style="margin-top: 10px;">
-  <img src="https://streak-stats.demolab.com/?user=angkon101&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</div>
+<br/>
+
+<details open>
+  <summary><b>⚡ Live GitHub Activity & Streak Metrics (Click to Expand / Collapse)</b></summary>
+  <br/>
+  <div align="center">
+    <img src="https://github-stats-extended.vercel.app/api?username=angkon101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Angkon's GitHub stats" height="165" />
+    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=angkon101&layout=compact&theme=tokyonight&hide_border=true" alt="Top Langs" height="165" />
+  </div>
+  <div align="center" style="margin-top: 10px;">
+    <img src="https://streak-stats.demolab.com/?user=angkon101&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  </div>
+</details>
 
 ---
 
