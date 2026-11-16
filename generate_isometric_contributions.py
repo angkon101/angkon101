@@ -260,8 +260,10 @@ def generate_isometric_svg(filename="isometric_contributions.svg"):
         }
     }
     
-    svg.append('  <!-- 3D Isometric Obelisk Calendar -->')
+    svg.append('  <!-- 3D Isometric Obelisk Calendar with Continuous 3D Perspective Movement -->')
     svg.append('  <g class="isometric-grid">')
+    # Autonomous 3D camera perspective drift
+    svg.append('    <animateTransform attributeName="transform" type="translate" values="0,0; 3,-4; 0,0; -3,4; 0,0" dur="8s" repeatCount="indefinite" />')
     
     pillars = []
     
@@ -319,23 +321,29 @@ def generate_isometric_svg(filename="isometric_contributions.svg"):
         
         svg.append(f'    <g>')
         
-        # 1. Top face
-        svg.append(f'      <polygon points="{pts_top}" fill="{cp["top"]}" />')
-        
-        # 2. Left face (with smooth rise animation for active days)
+        # 1. Top face (with rhythmic breathing elevation)
         if lvl != 'NONE':
-            pts_left_base = f"{x - tr:.1f},{y - 2.0:.1f} {x:.1f},{y + thr - 2.0:.1f} {x:.1f},{y + thr:.1f} {x - tr:.1f},{y:.1f}"
+            pts_top_pulse = f"{x:.1f},{y - thr - h - 2.5:.1f} {x + tr:.1f},{y - h - 2.5:.1f} {x:.1f},{y + thr - h - 2.5:.1f} {x - tr:.1f},{y - h - 2.5:.1f}"
+            svg.append(f'      <polygon points="{pts_top}" fill="{cp["top"]}">')
+            svg.append(f'        <animate attributeName="points" values="{pts_top}; {pts_top_pulse}; {pts_top}" dur="{2.8 + (p["depth"]%4)*0.6:.1f}s" repeatCount="indefinite" />')
+            svg.append('      </polygon>')
+        else:
+            svg.append(f'      <polygon points="{pts_top}" fill="{cp["top"]}" />')
+        
+        # 2. Left face
+        if lvl != 'NONE':
+            pts_left_pulse = f"{x - tr:.1f},{y - h - 2.5:.1f} {x:.1f},{y + thr - h - 2.5:.1f} {x:.1f},{y + thr:.1f} {x - tr:.1f},{y:.1f}"
             svg.append(f'      <polygon points="{pts_left}" fill="{cp["left"]}">')
-            svg.append(f'        <animate attributeName="points" values="{pts_left_base}; {pts_left}; {pts_left}" dur="2.2s" repeatCount="1" />')
+            svg.append(f'        <animate attributeName="points" values="{pts_left}; {pts_left_pulse}; {pts_left}" dur="{2.8 + (p["depth"]%4)*0.6:.1f}s" repeatCount="indefinite" />')
             svg.append('      </polygon>')
         else:
             svg.append(f'      <polygon points="{pts_left}" fill="{cp["left"]}" />')
             
         # 3. Right face
         if lvl != 'NONE':
-            pts_right_base = f"{x:.1f},{y + thr - 2.0:.1f} {x + tr:.1f},{y - 2.0:.1f} {x + tr:.1f},{y:.1f} {x:.1f},{y + thr:.1f}"
+            pts_right_pulse = f"{x:.1f},{y + thr - h - 2.5:.1f} {x + tr:.1f},{y - h - 2.5:.1f} {x + tr:.1f},{y:.1f} {x:.1f},{y + thr:.1f}"
             svg.append(f'      <polygon points="{pts_right}" fill="{cp["right"]}">')
-            svg.append(f'        <animate attributeName="points" values="{pts_right_base}; {pts_right}; {pts_right}" dur="2.2s" repeatCount="1" />')
+            svg.append(f'        <animate attributeName="points" values="{pts_right}; {pts_right_pulse}; {pts_right}" dur="{2.8 + (p["depth"]%4)*0.6:.1f}s" repeatCount="indefinite" />')
             svg.append('      </polygon>')
         else:
             svg.append(f'      <polygon points="{pts_right}" fill="{cp["right"]}" />')
