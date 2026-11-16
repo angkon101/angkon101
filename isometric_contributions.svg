@@ -1,0 +1,3205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580" viewBox="0 0 1000 580">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(0,0,0,0.08)" />
+    </filter>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.04)" />
+    </filter>
+  </defs>
+  <style>
+    * { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+    .card-title { font-size: 15px; font-weight: 700; fill: #24292f; }
+    .stat-number { font-size: 24px; font-weight: 700; fill: #1a7f37; }
+    .stat-label { font-size: 11px; font-weight: 600; fill: #57606a; }
+    .stat-sub { font-size: 10px; fill: #57606a; }
+    .link-text { font-size: 11px; fill: #0969da; text-decoration: none; }
+    .legend-text { font-size: 10px; fill: #57606a; }
+  </style>
+  <!-- Background Canvas -->
+  <rect width="1000" height="580" fill="#f6f8fa" />
+  <!-- Decorative Outer Contribution Mosaic -->
+  <g opacity="0.85">
+    <rect x="0" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="0" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="0" y="36" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="54" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="0" y="72" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="90" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="108" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="126" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="144" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="0" y="162" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="180" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="198" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="0" y="216" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="0" y="234" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="0" y="252" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="0" y="270" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="0" y="288" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="0" y="306" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="324" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="0" y="342" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="0" y="360" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="378" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="0" y="396" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="0" y="414" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="0" y="432" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="0" y="450" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="468" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="0" y="486" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="0" y="504" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="0" y="522" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="0" y="540" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="0" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="0" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="18" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="36" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="18" y="54" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="18" y="72" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="90" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="18" y="108" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="18" y="126" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="144" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="162" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="18" y="180" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="18" y="198" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="18" y="216" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="18" y="234" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="252" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="18" y="270" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="288" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="18" y="306" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="324" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="342" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="18" y="360" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="378" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="18" y="396" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="414" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="432" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="18" y="450" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="468" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="18" y="486" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="18" y="504" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="522" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="18" y="540" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="18" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="18" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="36" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="36" y="54" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="72" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="36" y="90" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="36" y="108" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="36" y="126" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="36" y="144" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="162" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="36" y="180" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="36" y="198" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="216" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="234" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="252" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="270" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="288" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="36" y="306" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="36" y="324" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="36" y="342" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="36" y="360" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="378" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="36" y="396" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="36" y="414" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="432" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="450" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="468" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="36" y="486" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="504" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="36" y="522" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="540" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="36" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="36" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="54" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="54" y="36" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="54" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="54" y="72" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="90" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="54" y="108" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="126" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="54" y="144" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="54" y="162" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="54" y="180" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="54" y="198" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="216" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="234" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="54" y="252" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="54" y="270" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="288" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="306" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="54" y="324" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="54" y="342" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="54" y="360" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="54" y="378" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="54" y="396" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="54" y="414" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="432" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="54" y="450" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="54" y="468" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="486" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="504" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="522" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="540" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="54" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="72" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="72" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="72" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="72" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="90" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="90" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="90" y="558" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="90" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="108" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="108" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="108" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="108" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="126" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="126" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="126" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="126" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="144" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="144" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="144" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="144" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="162" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="162" y="18" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="162" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="162" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="180" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="180" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="180" y="558" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="180" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="198" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="198" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="198" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="198" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="216" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="216" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="216" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="216" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="234" y="0" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="234" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="234" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="234" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="252" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="252" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="252" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="252" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="270" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="270" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="270" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="270" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="288" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="288" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="288" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="288" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="306" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="306" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="306" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="306" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="324" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="324" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="324" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="324" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="342" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="342" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="342" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="342" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="360" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="360" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="360" y="558" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="360" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="378" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="378" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="378" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="378" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="396" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="396" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="396" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="396" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="414" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="414" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="414" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="414" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="432" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="432" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="432" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="432" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="450" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="450" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="450" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="450" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="468" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="468" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="468" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="468" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="486" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="486" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="486" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="486" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="504" y="0" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="504" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="504" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="504" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="522" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="522" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="522" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="522" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="540" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="540" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="540" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="540" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="558" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="558" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="558" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="558" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="576" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="576" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="576" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="576" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="594" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="594" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="594" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="594" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="612" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="612" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="612" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="612" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="630" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="630" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="630" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="630" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="648" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="648" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="648" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="648" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="666" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="666" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="666" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="666" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="684" y="0" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="684" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="684" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="684" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="702" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="702" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="702" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="702" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="720" y="0" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="720" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="720" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="720" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="738" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="738" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="738" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="738" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="756" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="756" y="18" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="756" y="558" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="756" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="774" y="0" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="774" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="774" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="774" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="792" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="792" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="792" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="792" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="810" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="810" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="810" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="810" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="828" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="828" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="828" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="828" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="846" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="846" y="18" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="846" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="846" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="864" y="0" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="864" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="864" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="864" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="882" y="0" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="882" y="18" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="882" y="558" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="882" y="576" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="900" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="900" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="900" y="558" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="900" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="918" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="918" y="18" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="918" y="558" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="918" y="576" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="0" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="936" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="36" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="54" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="72" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="90" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="108" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="126" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="144" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="936" y="162" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="936" y="180" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="936" y="198" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="936" y="216" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="234" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="252" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="936" y="270" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="936" y="288" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="306" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="324" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="342" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="360" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="378" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="396" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="936" y="414" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="936" y="432" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="936" y="450" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="468" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="936" y="486" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="936" y="504" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="522" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="936" y="540" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="936" y="558" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="936" y="576" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="954" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="36" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="954" y="54" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="72" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="954" y="90" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="954" y="108" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="126" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="144" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="162" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="954" y="180" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="954" y="198" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="216" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="234" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="954" y="252" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="954" y="270" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="288" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="954" y="306" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="954" y="324" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="954" y="342" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="360" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="954" y="378" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="396" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="954" y="414" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="432" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="954" y="450" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="468" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="486" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="504" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="954" y="522" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="540" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="954" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="954" y="576" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="0" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="18" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="972" y="36" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="54" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="972" y="72" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="972" y="90" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="108" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="126" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="972" y="144" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="972" y="162" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="180" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="972" y="198" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="972" y="216" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="972" y="234" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="252" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="972" y="270" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="288" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="306" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="972" y="324" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="342" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="360" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="378" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="972" y="396" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="414" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="432" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="972" y="450" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="468" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="972" y="486" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="972" y="504" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="522" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="972" y="540" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="972" y="558" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="972" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="0" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="990" y="18" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="36" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="990" y="54" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="990" y="72" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="90" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="990" y="108" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="126" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="144" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="162" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="180" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="990" y="198" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="216" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="234" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="252" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="990" y="270" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="990" y="288" width="13" height="13" rx="2.5" fill="#9be9a8" />
+    <rect x="990" y="306" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="324" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="342" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="360" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="378" width="13" height="13" rx="2.5" fill="#30a14e" />
+    <rect x="990" y="396" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="414" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="990" y="432" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="990" y="450" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="468" width="13" height="13" rx="2.5" fill="#40c463" />
+    <rect x="990" y="486" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="504" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="522" width="13" height="13" rx="2.5" fill="#216e39" />
+    <rect x="990" y="540" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="558" width="13" height="13" rx="2.5" fill="#ebedf0" />
+    <rect x="990" y="576" width="13" height="13" rx="2.5" fill="#216e39" />
+  </g>
+  <!-- Central White Card -->
+  <rect x="75" y="28" width="850" height="524" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="1" filter="url(#card-shadow)" />
+  <!-- Top Right Contributions Deck -->
+  <text x="685" y="64" class="card-title">Contributions</text>
+  <rect x="685" y="74" width="210" height="80" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1" />
+  <text x="701" y="104" class="stat-number">207</text>
+  <text x="701" y="120" class="stat-label">Total</text>
+  <text x="701" y="134" class="stat-sub">Nov 16 → Present</text>
+  <text x="810" y="104" class="stat-number">14</text>
+  <text x="810" y="120" class="stat-label">Best day</text>
+  <text x="810" y="134" class="stat-sub">Nov 8</text>
+  <text x="895" y="170" text-anchor="end" class="stat-sub" font-size="11" fill="#24292f">
+    Average: <tspan font-weight="700">0.57</tspan> / day
+  </text>
+  <!-- Bottom Left Streaks Deck -->
+  <text x="110" y="394" class="card-title">Streaks</text>
+  <rect x="110" y="404" width="230" height="80" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1" />
+  <text x="126" y="434" class="stat-number">6 <tspan font-size="13" font-weight="600">days</tspan></text>
+  <text x="126" y="450" class="stat-label">Longest</text>
+  <text x="126" y="464" class="stat-sub">Nov 3 → Nov 8</text>
+  <text x="240" y="434" class="stat-number">1 <tspan font-size="13" font-weight="600">days</tspan></text>
+  <text x="240" y="450" class="stat-label">Current</text>
+  <text x="240" y="464" class="stat-sub">Nov 15 → Nov 16</text>
+  <!-- Footer Controls -->
+  <text x="110" y="530" class="link-text">Learn how we count contributions.</text>
+  <text x="720" y="530" class="legend-text">Less</text>
+  <rect x="750" y="522" width="10" height="10" rx="2" fill="#ebedf0" />
+  <rect x="764" y="522" width="10" height="10" rx="2" fill="#9be9a8" />
+  <rect x="778" y="522" width="10" height="10" rx="2" fill="#40c463" />
+  <rect x="792" y="522" width="10" height="10" rx="2" fill="#30a14e" />
+  <rect x="806" y="522" width="10" height="10" rx="2" fill="#216e39" />
+  <text x="826" y="530" class="legend-text">More</text>
+  <!-- 3D Isometric Contribution Grid -->
+  <g class="isometric-stage">
+    <g transform="translate(135.00 132.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 140.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(120.50 140.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 149.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(135.00 149.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(106.00 149.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 157.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 157.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(120.50 157.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(91.50 157.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 165.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 165.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(135.00 165.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(106.00 165.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(77.00 165.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 174.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 174.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 174.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(120.50 174.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(91.50 174.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(62.50 174.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(135.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(106.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(77.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(48.00 182.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(120.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(91.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(62.50 190.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(135.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(106.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(77.00 199.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(120.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(91.50 207.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(135.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(106.00 215.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(120.50 224.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(135.00 232.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(149.50 240.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(164.00 249.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(178.50 257.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(193.00 266.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(207.50 274.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(222.00 282.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(236.50 291.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(251.00 299.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(265.50 307.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(280.00 316.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(294.50 324.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(309.00 332.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(323.50 341.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(512.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(338.00 349.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(526.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(352.50 357.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(541.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(512.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(367.00 366.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(555.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(526.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(381.50 374.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(570.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(541.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(512.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(396.00 382.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(555.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(526.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(410.50 391.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 391.70)">
+      <animateTransform attributeName="transform" type="translate" values="599.00 399.60; 599.00 391.70; 599.00 391.70" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(216, 232, 135)" />
+      <polygon points="0,0 12.1,7.0 12.1,17.5 0,10.5" fill="rgb(181, 194, 113)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,17.5 0,10.5; 0,0 12.1,7.0 12.1,17.5 0,10.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,10.5 12.1,17.5" fill="rgb(151, 162, 95)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,10.5 12.1,17.5; 12.1,7.0 24.2,0 24.2,10.5 12.1,17.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(570.00 368.20)">
+      <animateTransform attributeName="transform" type="translate" values="570.00 399.60; 570.00 368.20; 570.00 368.20" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,41.0 0,34.0" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,41.0 0,34.0; 0,0 12.1,7.0 12.1,41.0 0,34.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,34.0 12.1,41.0" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,34.0 12.1,41.0; 12.1,7.0 24.2,0 24.2,34.0 12.1,41.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(541.00 399.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(512.00 399.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 399.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 399.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(425.00 399.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(613.50 407.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 360.55)">
+      <animateTransform attributeName="transform" type="translate" values="584.50 407.95; 584.50 360.55; 584.50 360.55" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(555.50 389.55)">
+      <animateTransform attributeName="transform" type="translate" values="555.50 407.95; 555.50 389.55; 555.50 389.55" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(140, 197, 105)" />
+      <polygon points="0,0 12.1,7.0 12.1,28.0 0,21.0" fill="rgb(117, 165, 88)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,28.0 0,21.0; 0,0 12.1,7.0 12.1,28.0 0,21.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" fill="rgb(98, 138, 74)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(526.50 407.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 407.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 407.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(439.50 407.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(628.00 416.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 368.90)">
+      <animateTransform attributeName="transform" type="translate" values="599.00 416.30; 599.00 368.90; 599.00 368.90" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(570.00 416.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(541.00 416.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(512.00 416.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 416.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(454.00 416.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(642.50 424.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(613.50 424.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 377.25)">
+      <animateTransform attributeName="transform" type="translate" values="584.50 424.65; 584.50 377.25; 584.50 377.25" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(555.50 424.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(526.50 424.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 424.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(468.50 424.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(657.00 413.10)">
+      <animateTransform attributeName="transform" type="translate" values="657.00 433.00; 657.00 413.10; 657.00 413.10" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(140, 197, 105)" />
+      <polygon points="0,0 12.1,7.0 12.1,29.5 0,22.5" fill="rgb(117, 165, 88)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,29.5 0,22.5; 0,0 12.1,7.0 12.1,29.5 0,22.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,22.5 12.1,29.5" fill="rgb(98, 138, 74)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,22.5 12.1,29.5; 12.1,7.0 24.2,0 24.2,22.5 12.1,29.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(628.00 433.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 401.60)">
+      <animateTransform attributeName="transform" type="translate" values="599.00 433.00; 599.00 401.60; 599.00 401.60" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,41.0 0,34.0" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,41.0 0,34.0; 0,0 12.1,7.0 12.1,41.0 0,34.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,34.0 12.1,41.0" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,34.0 12.1,41.0; 12.1,7.0 24.2,0 24.2,34.0 12.1,41.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(570.00 398.60)">
+      <animateTransform attributeName="transform" type="translate" values="570.00 433.00; 570.00 398.60; 570.00 398.60" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,44.0 0,37.0" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,44.0 0,37.0; 0,0 12.1,7.0 12.1,44.0 0,37.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,37.0 12.1,44.0" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,37.0 12.1,44.0; 12.1,7.0 24.2,0 24.2,37.0 12.1,44.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(541.00 433.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(512.00 433.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(483.00 433.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(671.50 441.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(642.50 441.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(613.50 441.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 441.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(555.50 422.95)">
+      <animateTransform attributeName="transform" type="translate" values="555.50 441.35; 555.50 422.95; 555.50 422.95" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(140, 197, 105)" />
+      <polygon points="0,0 12.1,7.0 12.1,28.0 0,21.0" fill="rgb(117, 165, 88)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,28.0 0,21.0; 0,0 12.1,7.0 12.1,28.0 0,21.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" fill="rgb(98, 138, 74)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(526.50 441.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(497.50 406.95)">
+      <animateTransform attributeName="transform" type="translate" values="497.50 441.35; 497.50 406.95; 497.50 406.95" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,44.0 0,37.0" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,44.0 0,37.0; 0,0 12.1,7.0 12.1,44.0 0,37.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,37.0 12.1,44.0" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,37.0 12.1,44.0; 12.1,7.0 24.2,0 24.2,37.0 12.1,44.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(686.00 402.30)">
+      <animateTransform attributeName="transform" type="translate" values="686.00 449.70; 686.00 402.30; 686.00 402.30" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(657.00 416.80)">
+      <animateTransform attributeName="transform" type="translate" values="657.00 449.70; 657.00 416.80; 657.00 416.80" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,42.5 0,35.5" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,42.5 0,35.5; 0,0 12.1,7.0 12.1,42.5 0,35.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,35.5 12.1,42.5" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,35.5 12.1,42.5; 12.1,7.0 24.2,0 24.2,35.5 12.1,42.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(628.00 449.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 449.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(570.00 449.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(541.00 402.30)">
+      <animateTransform attributeName="transform" type="translate" values="541.00 449.70; 541.00 402.30; 541.00 402.30" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(512.00 449.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(700.50 458.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(671.50 458.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(642.50 426.65)">
+      <animateTransform attributeName="transform" type="translate" values="642.50 458.05; 642.50 426.65; 642.50 426.65" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,41.0 0,34.0" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,41.0 0,34.0; 0,0 12.1,7.0 12.1,41.0 0,34.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,34.0 12.1,41.0" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,34.0 12.1,41.0; 12.1,7.0 24.2,0 24.2,34.0 12.1,41.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(613.50 458.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 458.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(555.50 458.05)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(526.50 450.15)">
+      <animateTransform attributeName="transform" type="translate" values="526.50 458.05; 526.50 450.15; 526.50 450.15" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(216, 232, 135)" />
+      <polygon points="0,0 12.1,7.0 12.1,17.5 0,10.5" fill="rgb(181, 194, 113)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,17.5 0,10.5; 0,0 12.1,7.0 12.1,17.5 0,10.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,10.5 12.1,17.5" fill="rgb(151, 162, 95)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,10.5 12.1,17.5; 12.1,7.0 24.2,0 24.2,10.5 12.1,17.5" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(715.00 466.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(686.00 460.00)">
+      <animateTransform attributeName="transform" type="translate" values="686.00 466.40; 686.00 460.00; 686.00 460.00" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(216, 232, 135)" />
+      <polygon points="0,0 12.1,7.0 12.1,16.0 0,9.0" fill="rgb(181, 194, 113)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,16.0 0,9.0; 0,0 12.1,7.0 12.1,16.0 0,9.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,9.0 12.1,16.0" fill="rgb(151, 162, 95)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,9.0 12.1,16.0; 12.1,7.0 24.2,0 24.2,9.0 12.1,16.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(657.00 466.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(628.00 466.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 466.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(570.00 466.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(541.00 466.40)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(700.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(671.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(642.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(613.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(555.50 474.75)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 464.70)">
+      <animateTransform attributeName="transform" type="translate" values="744.00 483.10; 744.00 464.70; 744.00 464.70" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(140, 197, 105)" />
+      <polygon points="0,0 12.1,7.0 12.1,28.0 0,21.0" fill="rgb(117, 165, 88)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,28.0 0,21.0; 0,0 12.1,7.0 12.1,28.0 0,21.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" fill="rgb(98, 138, 74)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(715.00 483.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(686.00 483.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(657.00 483.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(628.00 483.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 435.70)">
+      <animateTransform attributeName="transform" type="translate" values="599.00 483.10; 599.00 435.70; 599.00 435.70" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(570.00 483.10)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 491.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 491.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(700.50 491.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(671.50 473.05)">
+      <animateTransform attributeName="transform" type="translate" values="671.50 491.45; 671.50 473.05; 671.50 473.05" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(140, 197, 105)" />
+      <polygon points="0,0 12.1,7.0 12.1,28.0 0,21.0" fill="rgb(117, 165, 88)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,28.0 0,21.0; 0,0 12.1,7.0 12.1,28.0 0,21.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" fill="rgb(98, 138, 74)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(642.50 444.05)">
+      <animateTransform attributeName="transform" type="translate" values="642.50 491.45; 642.50 444.05; 642.50 444.05" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(613.50 491.45)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(584.50 444.05)">
+      <animateTransform attributeName="transform" type="translate" values="584.50 491.45; 584.50 444.05; 584.50 444.05" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(773.00 499.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 452.40)">
+      <animateTransform attributeName="transform" type="translate" values="744.00 499.80; 744.00 452.40; 744.00 452.40" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(715.00 499.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(686.00 499.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(657.00 452.40)">
+      <animateTransform attributeName="transform" type="translate" values="657.00 499.80; 657.00 452.40; 657.00 452.40" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(628.00 499.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(599.00 499.80)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 508.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 508.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 489.75)">
+      <animateTransform attributeName="transform" type="translate" values="729.50 508.15; 729.50 489.75; 729.50 489.75" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(140, 197, 105)" />
+      <polygon points="0,0 12.1,7.0 12.1,28.0 0,21.0" fill="rgb(117, 165, 88)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,28.0 0,21.0; 0,0 12.1,7.0 12.1,28.0 0,21.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" fill="rgb(98, 138, 74)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0; 12.1,7.0 24.2,0 24.2,21.0 12.1,28.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(700.50 473.75)">
+      <animateTransform attributeName="transform" type="translate" values="700.50 508.15; 700.50 473.75; 700.50 473.75" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(71, 160, 66)" />
+      <polygon points="0,0 12.1,7.0 12.1,44.0 0,37.0" fill="rgb(59, 134, 55)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,44.0 0,37.0; 0,0 12.1,7.0 12.1,44.0 0,37.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,37.0 12.1,44.0" fill="rgb(50, 112, 46)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,37.0 12.1,44.0; 12.1,7.0 24.2,0 24.2,37.0 12.1,44.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(671.50 460.75)">
+      <animateTransform attributeName="transform" type="translate" values="671.50 508.15; 671.50 460.75; 671.50 460.75" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(642.50 508.15)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(613.50 460.75)">
+      <animateTransform attributeName="transform" type="translate" values="613.50 508.15; 613.50 460.75; 613.50 460.75" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(802.00 516.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(773.00 516.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 516.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(715.00 516.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(686.00 516.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(657.00 510.10)">
+      <animateTransform attributeName="transform" type="translate" values="657.00 516.50; 657.00 510.10; 657.00 510.10" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(216, 232, 135)" />
+      <polygon points="0,0 12.1,7.0 12.1,16.0 0,9.0" fill="rgb(181, 194, 113)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,16.0 0,9.0; 0,0 12.1,7.0 12.1,16.0 0,9.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,9.0 12.1,16.0" fill="rgb(151, 162, 95)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,9.0 12.1,16.0; 12.1,7.0 24.2,0 24.2,9.0 12.1,16.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(628.00 516.50)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(816.50 524.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 524.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 524.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 524.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(700.50 518.45)">
+      <animateTransform attributeName="transform" type="translate" values="700.50 524.85; 700.50 518.45; 700.50 518.45" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(216, 232, 135)" />
+      <polygon points="0,0 12.1,7.0 12.1,16.0 0,9.0" fill="rgb(181, 194, 113)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,16.0 0,9.0; 0,0 12.1,7.0 12.1,16.0 0,9.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,9.0 12.1,16.0" fill="rgb(151, 162, 95)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,9.0 12.1,16.0; 12.1,7.0 24.2,0 24.2,9.0 12.1,16.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(671.50 524.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(642.50 524.85)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(831.00 533.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(802.00 533.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(773.00 533.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 533.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(715.00 533.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(686.00 533.20)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(657.00 485.80)">
+      <animateTransform attributeName="transform" type="translate" values="657.00 533.20; 657.00 485.80; 657.00 485.80" dur="2.5s" repeatCount="1" />
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(33, 110, 57)" />
+      <polygon points="0,0 12.1,7.0 12.1,57.0 0,50.0" fill="rgb(27, 92, 48)">
+        <animate attributeName="points" values="0,0 12.1,7.0 12.1,9.6 0,2.6; 0,0 12.1,7.0 12.1,57.0 0,50.0; 0,0 12.1,7.0 12.1,57.0 0,50.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" fill="rgb(22, 75, 39)">
+        <animate attributeName="points" values="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0; 12.1,7.0 24.2,0 24.2,50.0 12.1,57.0" dur="2.5s" repeatCount="1" />
+      </polygon>
+    </g>
+    <g transform="translate(845.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(816.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(700.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(671.50 541.55)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(860.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(831.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(802.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(773.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(715.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(686.00 549.90)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(874.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(845.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(816.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(700.50 558.25)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(889.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(860.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(831.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(802.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(773.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(715.00 566.60)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(874.50 574.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(845.50 574.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(816.50 574.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 574.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 574.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(729.50 574.95)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(860.00 583.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(831.00 583.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(802.00 583.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(773.00 583.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(744.00 583.30)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(845.50 591.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(816.50 591.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 591.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(758.50 591.65)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(831.00 600.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(802.00 600.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(773.00 600.00)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(816.50 608.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(787.50 608.35)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+    <g transform="translate(802.00 616.70)">
+      <polygon points="0,0 12.1,-7.0 24.2,0 12.1,7.0" fill="rgb(239, 239, 239)" />
+      <polygon points="0,0 12.1,7.0 12.1,9.6 0,2.6" fill="rgb(205, 205, 205)">
+      </polygon>
+      <polygon points="12.1,7.0 24.2,0 24.2,2.6 12.1,9.6" fill="rgb(175, 175, 175)">
+      </polygon>
+    </g>
+  </g>
+</svg>

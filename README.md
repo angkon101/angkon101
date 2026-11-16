@@ -79,13 +79,25 @@
 
 ---
 
-### ⛏️ 3D Minecraft Voxel Contribution World
+### 🏔️ 3D Isometric Contribution Calendar
 
 <div align="center">
   <a href="https://github.com/angkon101">
-    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/minecraft_contribution.svg" alt="3D Minecraft Animation on Contribution Graph" width="100%" />
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="3D Isometric Contribution Calendar" width="100%" />
   </a>
 </div>
+
+<br/>
+
+<details>
+  <summary><b>⛏️ 3D Minecraft Voxel Adventure View (Click to Expand)</b></summary>
+  <br/>
+  <div align="center">
+    <a href="https://github.com/angkon101">
+      <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/minecraft_contribution.svg" alt="3D Minecraft Animation on Contribution Graph" width="100%" />
+    </a>
+  </div>
+</details>
 
 ---
 
