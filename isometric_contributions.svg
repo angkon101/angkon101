@@ -24,7 +24,7 @@
   <text x="680" y="38" class="section-title">Contributions</text>
   <rect x="680" y="48" width="225" height="70" class="panel-box" />
   <line x1="792" y1="56" x2="792" y2="110" class="divider-line" />
-  <text x="696" y="74" class="stat-val">200</text>
+  <text x="696" y="74" class="stat-val">202</text>
   <text x="696" y="89" class="stat-label">Total</text>
   <text x="696" y="103" class="stat-date">Nov 16 → Present</text>
   <text x="808" y="74" class="stat-val">24</text>
@@ -1950,14 +1950,14 @@
       <polygon points="578.0,351.0 585.5,347.2 585.5,349.2 578.0,353.0" fill="#afb8c1" />
     </g>
     <g>
-      <polygon points="679.2,325.7 686.7,329.4 679.2,333.2 671.7,329.4" fill="#40c463">
-        <animate attributeName="points" values="679.2,325.7 686.7,329.4 679.2,333.2 671.7,329.4; 679.2,323.2 686.7,326.9 679.2,330.7 671.7,326.9; 679.2,325.7 686.7,329.4 679.2,333.2 671.7,329.4" dur="3.4s" repeatCount="indefinite" />
+      <polygon points="679.2,324.1 686.7,327.8 679.2,331.6 671.7,327.8" fill="#40c463">
+        <animate attributeName="points" values="679.2,324.1 686.7,327.8 679.2,331.6 671.7,327.8; 679.2,321.6 686.7,325.3 679.2,329.1 671.7,325.3; 679.2,324.1 686.7,327.8 679.2,331.6 671.7,327.8" dur="3.4s" repeatCount="indefinite" />
       </polygon>
-      <polygon points="671.7,329.4 679.2,333.2 679.2,357.6 671.7,353.8" fill="#34a853">
-        <animate attributeName="points" values="671.7,329.4 679.2,333.2 679.2,357.6 671.7,353.8; 671.7,326.9 679.2,330.7 679.2,357.6 671.7,353.8; 671.7,329.4 679.2,333.2 679.2,357.6 671.7,353.8" dur="3.4s" repeatCount="indefinite" />
+      <polygon points="671.7,327.8 679.2,331.6 679.2,357.6 671.7,353.8" fill="#34a853">
+        <animate attributeName="points" values="671.7,327.8 679.2,331.6 679.2,357.6 671.7,353.8; 671.7,325.3 679.2,329.1 679.2,357.6 671.7,353.8; 671.7,327.8 679.2,331.6 679.2,357.6 671.7,353.8" dur="3.4s" repeatCount="indefinite" />
       </polygon>
-      <polygon points="679.2,333.2 686.7,329.4 686.7,353.8 679.2,357.6" fill="#2a8c44">
-        <animate attributeName="points" values="679.2,333.2 686.7,329.4 686.7,353.8 679.2,357.6; 679.2,330.7 686.7,326.9 686.7,353.8 679.2,357.6; 679.2,333.2 686.7,329.4 686.7,353.8 679.2,357.6" dur="3.4s" repeatCount="indefinite" />
+      <polygon points="679.2,331.6 686.7,327.8 686.7,353.8 679.2,357.6" fill="#2a8c44">
+        <animate attributeName="points" values="679.2,331.6 686.7,327.8 686.7,353.8 679.2,357.6; 679.2,329.1 686.7,325.3 686.7,353.8 679.2,357.6; 679.2,331.6 686.7,327.8 686.7,353.8 679.2,357.6" dur="3.4s" repeatCount="indefinite" />
       </polygon>
     </g>
     <g>
