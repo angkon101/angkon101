@@ -18,6 +18,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pillow
       - name: Generate Profile 3D SVGs and Animations
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,10 +31,11 @@ jobs:
           python generate_minecraft.py
           python generate_3d_analytics.py
           python generate_game_skill_3d.py
-      - name: Push SVGs
+          python generate_360_rotation.py
+      - name: Push SVGs and 3D Assets
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add isometric_contributions.svg minecraft_contribution.svg analytics_3d.svg game_skill_3d.svg
-          git commit -m "chore: update interactive profile and game SVGs [skip ci]" || echo "No changes"
+          git add isometric_contributions.svg minecraft_contribution.svg analytics_3d.svg game_skill_3d.svg contributions_3d_360.gif
+          git commit -m "chore: update interactive profile and 3D assets [skip ci]" || echo "No changes"
           git push

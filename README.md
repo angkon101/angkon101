@@ -79,21 +79,34 @@
 
 ---
 
-### 🏔️ 3D Isometric Contribution Calendar
+### 🔄 3D 360° Dynamic Contribution World
 
 <div align="center">
-  <a href="https://angkon101.github.io/angkon101/" title="Click to launch Interactive 3D Moveable Mode">
-    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="3D Isometric Contribution Calendar" width="100%" />
+  <a href="https://angkon101.github.io/angkon101/" target="_blank" title="Click to launch Interactive 360° Mouse Drag & Zoom Mode">
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/contributions_3d_360.gif" alt="3D 360° Dynamic Moveable Contribution World" width="100%" />
   </a>
 
-  <p align="center" style="margin-top: 10px;">
+  <p align="center" style="margin-top: 12px;">
     <a href="https://angkon101.github.io/angkon101/" target="_blank">
-      <img src="https://img.shields.io/badge/🎮_Launch_3D_Moveable_Mode-360°_Orbit_%26_Zoom-2ea043?style=for-the-badge&logo=three.js&logoColor=white" alt="Launch 3D Mode" />
+      <img src="https://img.shields.io/badge/🎮_Launch_3D_Moveable_Mode-360°_Mouse_Orbit_%26_Zoom-2ea043?style=for-the-badge&logo=three.js&logoColor=white" alt="Launch 3D Moveable Mode" />
     </a>
+  </p>
+  <p align="center">
+    <i>💡 <b>Live 3D Preview:</b> Rotates dynamically in 360° on GitHub! <b>Click the model above</b> to grab with your mouse, orbit in 3D, and zoom in WebGL.</i>
   </p>
 </div>
 
 <br/>
+
+<details>
+  <summary><b>🏔️ Classical Isometric View (Static Card)</b></summary>
+  <br/>
+  <div align="center">
+    <a href="https://angkon101.github.io/angkon101/" target="_blank">
+      <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="3D Isometric Contribution Calendar" width="100%" />
+    </a>
+  </div>
+</details>
 
 <details>
   <summary><b>⛏️ 3D Minecraft Voxel Adventure View (Click to Expand)</b></summary>
