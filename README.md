@@ -79,11 +79,11 @@
 
 ---
 
-### 🎮 Mario Contribution Adventure
+### ⛏️ 3D Minecraft Voxel Contribution World
 
 <div align="center">
   <a href="https://github.com/angkon101">
-    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/mario_contribution.svg" alt="Mario Playing on Contribution Graph" width="100%" />
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/minecraft_contribution.svg" alt="3D Minecraft Animation on Contribution Graph" width="100%" />
   </a>
 </div>
 
