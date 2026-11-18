@@ -79,11 +79,11 @@
 
 ---
 
-### 🏛️ The Louvre Masterpiece: "Code & Creation"
+### 🏛️ The Louvre Masterpiece: "Mona Lisa & Code"
 
 <div align="center">
   <a href="https://angkon101.github.io/angkon101/" target="_blank" title="Click to launch Interactive 3D Moveable Mode">
-    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="Classical Museum Framed Contribution Canvas (Louvre Edition)" width="100%" />
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="Leonardo da Vinci's Mona Lisa & Angkon's Contribution Matrix (Musée du Louvre Edition)" width="100%" />
   </a>
 
   <p align="center" style="margin-top: 12px;">
@@ -92,7 +92,7 @@
     </a>
   </p>
   <p align="center">
-    <i>🏛️ <b>The Mona Lisa Aesthetic:</b> Sits still and poised in a classical gilded Louvre frame with ceiling spotlights and brass plaque — completely still with zero auto-rotation. <b>Click the painting</b> to grab with your mouse, rotate in 3D, and zoom in WebGL!</i>
+    <i>🎨 <b>Leonardo da Vinci's Mona Lisa:</b> Features La Gioconda herself with her iconic enigmatic smile, delicate veil, and crossed hands, paired with your 3D contribution matrix inside a classical Louvre gilded frame. Sits completely still with zero auto-rotation. <b>Click the painting</b> to explore in 3D WebGL mode!</i>
   </p>
 </div>
 
