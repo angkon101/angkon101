@@ -97,7 +97,7 @@ def fetch_contribution_calendar(username="angkon101", token=None):
         'weeks': weeks
     }
 
-def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
+def generate_handpainted_masterpiece_svg(filename="isometric_contributions.svg"):
     username = os.environ.get("GITHUB_ACTOR", "angkon101")
     token = os.environ.get("GITHUB_TOKEN")
     
@@ -126,18 +126,18 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '  <defs>',
-        '    <!-- Museum Louvre Wall Background -->',
+        '    <!-- Museum Wall Background Gradient -->',
         '    <linearGradient id="wall-paint" x1="0%" y1="0%" x2="100%" y2="100%">',
         '      <stop offset="0%" stop-color="#12151c" />',
-        '      <stop offset="50%" stop-color="#1b2029" />',
+        '      <stop offset="50%" stop-color="#1a2029" />',
         '      <stop offset="100%" stop-color="#0f1117" />',
         '    </linearGradient>',
         '',
-        '    <!-- Directional Gallery Ceiling Spotlight Illuminating Mona Lisa -->',
+        '    <!-- Museum Spotlight Pulsing Ambiance -->',
         '    <radialGradient id="louvre-spotlight" cx="35%" cy="12%" r="80%">',
-        '      <stop offset="0%" stop-color="rgba(255, 248, 225, 0.32)" />',
-        '      <stop offset="45%" stop-color="rgba(255, 240, 200, 0.12)" />',
-        '      <stop offset="100%" stop-color="rgba(0, 0, 0, 0.5)" />',
+        '      <stop offset="0%" stop-color="rgba(255, 248, 225, 0.35)" />',
+        '      <stop offset="45%" stop-color="rgba(255, 240, 200, 0.14)" />',
+        '      <stop offset="100%" stop-color="rgba(0, 0, 0, 0.52)" />',
         '    </radialGradient>',
         '',
         '    <!-- Classical Gilded Gold Frame Gradients -->',
@@ -172,7 +172,7 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '      <stop offset="100%" stop-color="#1e241c" />',
         '    </linearGradient>',
         '',
-        '    <!-- Renaissance Skin Tones (Da Vinci Sfumato Shading) -->',
+        '    <!-- Renaissance Skin Tones -->',
         '    <linearGradient id="skin-face" x1="25%" y1="0%" x2="80%" y2="100%">',
         '      <stop offset="0%" stop-color="#f5e0cb" />',
         '      <stop offset="45%" stop-color="#e9cbb2" />',
@@ -190,7 +190,7 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '      <stop offset="100%" stop-color="#be9479" />',
         '    </linearGradient>',
         '',
-        '    <!-- Mona Lisa Hair & Robes Gradients -->',
+        '    <!-- Hair & Fabric Gradients -->',
         '    <linearGradient id="hair-shade" x1="0%" y1="0%" x2="100%" y2="100%">',
         '      <stop offset="0%" stop-color="#36251b" />',
         '      <stop offset="50%" stop-color="#20150e" />',
@@ -208,7 +208,16 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '      <stop offset="100%" stop-color="#2c1f10" />',
         '    </linearGradient>',
         '',
-        '    <!-- Brass Exhibition Plaque Gradients -->',
+        '    <!-- Wet Oil Paint Varnish Glaze Sweep -->',
+        '    <linearGradient id="oil-varnish-sheen" x1="0%" y1="0%" x2="100%" y2="100%">',
+        '      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '      <stop offset="45%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '      <stop offset="50%" stop-color="rgba(255, 255, 255, 0.22)" />',
+        '      <stop offset="55%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '    </linearGradient>',
+        '',
+        '    <!-- Polished Brass Plate Gradient -->',
         '    <linearGradient id="brass-grad" x1="0%" y1="0%" x2="100%" y2="100%">',
         '      <stop offset="0%" stop-color="#7a551b" />',
         '      <stop offset="25%" stop-color="#cca244" />',
@@ -216,6 +225,13 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '      <stop offset="56%" stop-color="#fad97f" />',
         '      <stop offset="80%" stop-color="#b78e34" />',
         '      <stop offset="100%" stop-color="#6b4814" />',
+        '    </linearGradient>',
+        '    <linearGradient id="brass-sheen-sweep" x1="0%" y1="0%" x2="100%" y2="0%">',
+        '      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '      <stop offset="45%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '      <stop offset="50%" stop-color="rgba(255, 255, 255, 0.4)" />',
+        '      <stop offset="55%" stop-color="rgba(255, 255, 255, 0.0)" />',
+        '      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.0)" />',
         '    </linearGradient>',
         '',
         '    <!-- Shadow Filters -->',
@@ -225,8 +241,15 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '    <filter id="plaque-drop" x="-10%" y="-10%" width="120%" height="125%">',
         '      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(0,0,0,0.55)" />',
         '    </filter>',
+        '    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">',
+        '      <feGaussianBlur stdDeviation="3" result="blur" />',
+        '      <feComposite in="SourceGraphic" in2="blur" operator="over" />',
+        '    </filter>',
         '  </defs>',
         '',
+        '  <!-- ============================================================== -->',
+        '  <!-- CSS KEYFRAMES: HANDPAINTED MASTERPIECE ANIMATIONS             -->',
+        '  <!-- ============================================================== -->',
         '  <style>',
         '    * { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }',
         '    .section-title { font-size: 13.5px; font-weight: 700; fill: #24292f; letter-spacing: -0.2px; }',
@@ -241,11 +264,110 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '    .divider-line { stroke: #eaecef; stroke-width: 1; }',
         '    .plaque-title { font-family: "Cinzel", "Times New Roman", "Georgia", serif; font-size: 11.5px; font-weight: 700; fill: #2a1b08; letter-spacing: 1.5px; }',
         '    .plaque-sub { font-family: "Cinzel", "Times New Roman", "Georgia", serif; font-size: 9px; font-style: italic; fill: #5a3c14; letter-spacing: 0.9px; }',
+        '',
+        '    /* 1. Natural Sfumato Blink (Every 6.5s) */',
+        '    .mona-eyelid {',
+        '      transform-box: fill-box;',
+        '      transform-origin: top center;',
+        '      animation: eyelidBlink 6.5s infinite;',
+        '    }',
+        '    @keyframes eyelidBlink {',
+        '      0%, 95%, 100% { transform: scaleY(0); opacity: 0; }',
+        '      97% { transform: scaleY(1); opacity: 0.95; }',
+        '      99% { transform: scaleY(0.2); opacity: 0.4; }',
+        '    }',
+        '',
+        '    /* 2. Living Enigmatic Smile Breathing (Subtle micro-movement) */',
+        '    .living-smile {',
+        '      transform-box: fill-box;',
+        '      transform-origin: center;',
+        '      animation: smilePulse 7s ease-in-out infinite;',
+        '    }',
+        '    @keyframes smilePulse {',
+        '      0%, 100% { transform: scale(1) translateY(0); }',
+        '      50% { transform: scale(1.03) translateY(-0.6px); }',
+        '    }',
+        '',
+        '    /* 3. Renaissance Robe Subtle Breathing */',
+        '    .living-bodice {',
+        '      transform-box: fill-box;',
+        '      transform-origin: bottom center;',
+        '      animation: bodiceBreathe 4.5s ease-in-out infinite;',
+        '    }',
+        '    @keyframes bodiceBreathe {',
+        '      0%, 100% { transform: translateY(0); }',
+        '      50% { transform: translateY(-1.2px); }',
+        '    }',
+        '',
+        '    /* 4. River Arno Shimmer in Sfumato Landscape */',
+        '    .river-shimmer {',
+        '      animation: riverFlow 3.5s ease-in-out infinite alternate;',
+        '    }',
+        '    @keyframes riverFlow {',
+        '      0% { opacity: 0.35; stroke-dashoffset: 0; }',
+        '      100% { opacity: 0.75; stroke-dashoffset: 12; }',
+        '    }',
+        '',
+        '    /* 5. Wet Oil Paint Varnish Glaze Sweep across Canvas */',
+        '    .oil-varnish-wave {',
+        '      animation: varnishSweep 6s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;',
+        '    }',
+        '    @keyframes varnishSweep {',
+        '      0% { transform: translateX(-900px); }',
+        '      60%, 100% { transform: translateX(950px); }',
+        '    }',
+        '',
+        '    /* 6. Glowing Wet Paint Pulse on Contribution Pillars */',
+        '    .emerald-pulse {',
+        '      animation: emeraldPulse 3s ease-in-out infinite alternate;',
+        '    }',
+        '    @keyframes emeraldPulse {',
+        '      0% { filter: drop-shadow(0 0 0px rgba(33, 110, 57, 0.0)); }',
+        '      100% { filter: drop-shadow(0 0 4px rgba(64, 196, 99, 0.65)); }',
+        '    }',
+        '',
+        '    /* 7. Floating Golden Artist Pigment Dust in Spotlight */',
+        '    .pigment-dust-1 { animation: floatDust1 8s ease-in-out infinite; }',
+        '    .pigment-dust-2 { animation: floatDust2 11s ease-in-out infinite; }',
+        '    .pigment-dust-3 { animation: floatDust3 9.5s ease-in-out infinite; }',
+        '    @keyframes floatDust1 {',
+        '      0% { transform: translate(0, 0); opacity: 0.2; }',
+        '      50% { transform: translate(18px, -24px); opacity: 0.85; }',
+        '      100% { transform: translate(32px, -45px); opacity: 0.0; }',
+        '    }',
+        '    @keyframes floatDust2 {',
+        '      0% { transform: translate(0, 0); opacity: 0.15; }',
+        '      50% { transform: translate(-14px, -30px); opacity: 0.9; }',
+        '      100% { transform: translate(-25px, -55px); opacity: 0.0; }',
+        '    }',
+        '    @keyframes floatDust3 {',
+        '      0% { transform: translate(0, 0); opacity: 0.25; }',
+        '      50% { transform: translate(12px, -20px); opacity: 0.8; }',
+        '      100% { transform: translate(22px, -38px); opacity: 0.0; }',
+        '    }',
+        '',
+        '    /* 8. Brass Plaque Reflection Sheen */',
+        '    .brass-sheen {',
+        '      animation: brassSweep 7s ease-in-out infinite;',
+        '    }',
+        '    @keyframes brassSweep {',
+        '      0%, 40% { transform: translateX(-400px); }',
+        '      70%, 100% { transform: translateX(450px); }',
+        '    }',
+        '',
+        '    /* 9. Gallery Spotlight Ambiance Breathing */',
+        '    .spotlight-ambiance {',
+        '      animation: lightPulse 5s ease-in-out infinite alternate;',
+        '    }',
+        '    @keyframes lightPulse {',
+        '      0% { opacity: 0.85; }',
+        '      100% { opacity: 1.0; }',
+        '    }',
         '  </style>',
         '',
         '  <!-- 1. Museum Wall Background -->',
         f'  <rect width="{width}" height="{height}" fill="url(#wall-paint)" rx="10" />',
-        f'  <rect width="{width}" height="{height}" fill="url(#louvre-spotlight)" rx="10" />',
+        f'  <rect class="spotlight-ambiance" width="{width}" height="{height}" fill="url(#louvre-spotlight)" rx="10" />',
         '',
         '  <!-- 2. Classical Louvre Gilded Gold Frame -->',
         '  <g filter="url(#frame-drop)">',
@@ -268,10 +390,9 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '  <rect x="87" y="69" width="826" height="384" rx="2" fill="#fafafa" />',
         '',
         '  <!-- ============================================================== -->',
-        '  <!-- 4. LEONARDO DA VINCI: LA GIOCONDA (THE MONA LISA PORTRAIT)    -->',
+        '  <!-- 4. LEONARDO DA VINCI: LIVING MONA LISA (LA GIOCONDA)          -->',
         '  <!-- ============================================================== -->',
         '  <g id="mona-lisa-portrait" transform="translate(90, 71)">',
-        '    <!-- Clip path to keep Mona Lisa within her portrait arch/section -->',
         '    <defs>',
         '      <clipPath id="mona-clip">',
         '        <rect x="0" y="0" width="290" height="380" rx="2" />',
@@ -281,38 +402,37 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '    <g clip-path="url(#mona-clip)">',
         '      <!-- Background Sfumato Sky & Italian Landscape -->',
         '      <rect x="0" y="0" width="290" height="380" fill="url(#sfumato-sky)" />',
-        '      <!-- Distant hazy mountains and winding road -->',
+        '      <!-- Distant hazy mountains -->',
         '      <path d="M0 160 Q 60 140, 120 155 T 200 145 T 290 158 L 290 240 L 0 240 Z" fill="#698075" opacity="0.6" />',
         '      <path d="M0 185 Q 80 170, 160 185 T 290 175 L 290 280 L 0 280 Z" fill="#4d6255" opacity="0.75" />',
-        '      <!-- Winding River Arno -->',
-        '      <path d="M40 180 Q 70 200, 50 220 T 70 245" stroke="#8fa69a" stroke-width="4" fill="none" opacity="0.5" />',
-        '      <path d="M220 175 Q 240 195, 230 215 T 250 235" stroke="#8fa69a" stroke-width="3" fill="none" opacity="0.4" />',
+        '      <!-- Animated Living River Arno Streams -->',
+        '      <path class="river-shimmer" d="M40 180 Q 70 200, 50 220 T 70 245" stroke="#9bbbb0" stroke-width="4" stroke-dasharray="14,6" fill="none" opacity="0.6" />',
+        '      <path class="river-shimmer" d="M220 175 Q 240 195, 230 215 T 250 235" stroke="#9bbbb0" stroke-width="3" stroke-dasharray="10,5" fill="none" opacity="0.5" />',
         '      <!-- Earth & Loggia Balustrade Base -->',
         '      <rect x="0" y="240" width="290" height="140" fill="url(#sfumato-earth)" />',
         '      <rect x="0" y="360" width="290" height="20" fill="#1b1d16" stroke="#2c3024" stroke-width="1" />',
         '',
-        '      <!-- Robe / Cloak / Renaissance Gown -->',
-        '      <!-- Outer Dark Cloak covering shoulders -->',
-        '      <path d="M30 380 C 40 280, 80 230, 145 228 C 210 230, 250 280, 260 380 Z" fill="url(#dress-fabric)" />',
-        '      <!-- Ochre / Golden Brown Draped Shawl on Left Shoulder -->',
-        '      <path d="M45 380 C 50 310, 80 260, 120 250 L 105 380 Z" fill="url(#shawl-fabric)" />',
-        '      <path d="M245 380 C 240 310, 210 260, 170 250 L 185 380 Z" fill="url(#shawl-fabric)" />',
+        '      <!-- Robe / Cloak / Renaissance Gown with Subtle Living Breathing -->',
+        '      <g class="living-bodice">',
+        '        <!-- Outer Dark Cloak covering shoulders -->',
+        '        <path d="M30 380 C 40 280, 80 230, 145 228 C 210 230, 250 280, 260 380 Z" fill="url(#dress-fabric)" />',
+        '        <!-- Draped Shawl on Left/Right Shoulders -->',
+        '        <path d="M45 380 C 50 310, 80 260, 120 250 L 105 380 Z" fill="url(#shawl-fabric)" />',
+        '        <path d="M245 380 C 240 310, 210 260, 170 250 L 185 380 Z" fill="url(#shawl-fabric)" />',
         '',
-        '      <!-- Pleated Silk Bodice & Embroidered Gold Neckline -->',
-        '      <path d="M110 245 C 130 260, 160 260, 180 245 L 175 320 C 155 330, 135 330, 115 320 Z" fill="#2d2217" />',
-        '      <!-- Gold Embroidered Renaissance Border Trim -->',
-        '      <path d="M106 242 C 128 262, 162 262, 184 242" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-dasharray="3,2" />',
+        '        <!-- Pleated Silk Bodice & Embroidered Gold Neckline -->',
+        '        <path d="M110 245 C 130 260, 160 260, 180 245 L 175 320 C 155 330, 135 330, 115 320 Z" fill="#2d2217" />',
+        '        <!-- Gold Embroidered Renaissance Border Trim -->',
+        '        <path d="M106 242 C 128 262, 162 262, 184 242" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-dasharray="3,2" />',
+        '      </g>',
         '',
         '      <!-- Décolletage & Neck with Smooth Sfumato Transitions -->',
         '      <path d="M120 180 L 120 240 C 132 254, 158 254, 170 240 L 170 180 Z" fill="url(#skin-neck)" />',
-        '      <!-- Soft Chin Shadow -->',
         '      <ellipse cx="145" cy="200" rx="18" ry="8" fill="#9e6e50" opacity="0.35" />',
         '',
         '      <!-- Wavy Dark Renaissance Hair Flowing Over Shoulders -->',
-        '      <!-- Left Hair -->',
         '      <path d="M112 110 C 95 150, 90 210, 115 270 C 105 270, 80 220, 92 140 Z" fill="url(#hair-shade)" />',
         '      <path d="M114 125 C 102 165, 100 225, 122 280 C 112 280, 92 230, 102 150 Z" fill="#1b120c" />',
-        '      <!-- Right Hair -->',
         '      <path d="M178 110 C 195 150, 200 210, 175 270 C 185 270, 210 220, 198 140 Z" fill="url(#hair-shade)" />',
         '      <path d="M176 125 C 188 165, 190 225, 168 280 C 178 280, 198 230, 188 150 Z" fill="#1b120c" />',
         '',
@@ -321,76 +441,77 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         '',
         '      <!-- Transparent Silk Veil (Guarnello) over head -->',
         '      <path d="M110 110 C 110 50, 130 46, 145 46 C 160 46, 180 50, 180 110 C 165 95, 125 95, 110 110 Z" fill="#2a1f18" opacity="0.65" />',
-        '      <!-- Veil Edge Rim -->',
         '      <path d="M111 106 C 125 86, 165 86, 179 106" fill="none" stroke="#d5c8ba" stroke-width="1" opacity="0.6" />',
         '',
         '      <!-- High Plucked Renaissance Forehead & Hairline -->',
         '      <path d="M113 95 C 124 78, 145 74, 145 74 C 145 74, 166 78, 177 95 C 165 84, 125 84, 113 95 Z" fill="#241710" />',
         '',
-        '      <!-- Facial Features: Eyes, Nose, and the Iconic Enigmatic Smile -->',
-        '      <!-- Leonardo Eyebrow Region (Extremely subtle, no prominent brow hair) -->',
+        '      <!-- Subtle Eyebrow Contours -->',
         '      <path d="M123 108 Q 132 104, 138 107" fill="none" stroke="#b08468" stroke-width="1.2" opacity="0.4" />',
         '      <path d="M152 107 Q 158 104, 167 108" fill="none" stroke="#b08468" stroke-width="1.2" opacity="0.4" />',
         '',
-        '      <!-- Left Eye with Gentle Sfumato Gaze -->',
-        '      <ellipse cx="131" cy="116" rx="6.5" ry="3.5" fill="#fdf4eb" />',
-        '      <circle cx="131.5" cy="116" r="2.8" fill="#422e1e" />',
-        '      <circle cx="132.2" cy="115.3" r="0.9" fill="#ffffff" />',
-        '      <path d="M124 115 Q 131 111, 138 114" fill="none" stroke="#503522" stroke-width="1.3" />',
-        '      <path d="M125 116 Q 131 119, 137 116" fill="none" stroke="#90654c" stroke-width="0.8" opacity="0.7" />',
+        '      <!-- Left Eye with Natural Living Blink Animation -->',
+        '      <g id="mona-left-eye">',
+        '        <ellipse cx="131" cy="116" rx="6.5" ry="3.5" fill="#fdf4eb" />',
+        '        <circle cx="131.5" cy="116" r="2.8" fill="#422e1e" />',
+        '        <circle cx="132.2" cy="115.3" r="0.9" fill="#ffffff" />',
+        '        <path d="M124 115 Q 131 111, 138 114" fill="none" stroke="#503522" stroke-width="1.3" />',
+        '        <path d="M125 116 Q 131 119, 137 116" fill="none" stroke="#90654c" stroke-width="0.8" opacity="0.7" />',
+        '        <!-- Natural Blink Eyelid -->',
+        '        <path class="mona-eyelid" d="M123 113 Q 131 119, 139 113 L 139 117 Q 131 122, 123 117 Z" fill="#d4aa8c" />',
+        '      </g>',
         '',
-        '      <!-- Right Eye with Gentle Sfumato Gaze -->',
-        '      <ellipse cx="159" cy="116" rx="6.5" ry="3.5" fill="#fdf4eb" />',
-        '      <circle cx="158.5" cy="116" r="2.8" fill="#422e1e" />',
-        '      <circle cx="159.2" cy="115.3" r="0.9" fill="#ffffff" />',
-        '      <path d="M152 114 Q 159 111, 166 115" fill="none" stroke="#503522" stroke-width="1.3" />',
-        '      <path d="M153 116 Q 159 119, 165 116" fill="none" stroke="#90654c" stroke-width="0.8" opacity="0.7" />',
+        '      <!-- Right Eye with Natural Living Blink Animation -->',
+        '      <g id="mona-right-eye">',
+        '        <ellipse cx="159" cy="116" rx="6.5" ry="3.5" fill="#fdf4eb" />',
+        '        <circle cx="158.5" cy="116" r="2.8" fill="#422e1e" />',
+        '        <circle cx="159.2" cy="115.3" r="0.9" fill="#ffffff" />',
+        '        <path d="M152 114 Q 159 111, 166 115" fill="none" stroke="#503522" stroke-width="1.3" />',
+        '        <path d="M153 116 Q 159 119, 165 116" fill="none" stroke="#90654c" stroke-width="0.8" opacity="0.7" />',
+        '        <!-- Natural Blink Eyelid -->',
+        '        <path class="mona-eyelid" d="M151 113 Q 159 119, 167 113 L 167 117 Q 159 122, 151 117 Z" fill="#d4aa8c" />',
+        '      </g>',
         '',
-        '      <!-- Slender Italian Classical Nose with Shadow -->',
+        '      <!-- Nose with Classical Sfumato Shadow -->',
         '      <path d="M144 114 L 143 146 Q 145 151, 149 148" fill="none" stroke="#b8896d" stroke-width="1.5" />',
         '      <ellipse cx="141" cy="148" rx="2.5" ry="1.5" fill="#8f6146" opacity="0.5" />',
         '      <ellipse cx="149" cy="148" rx="2.5" ry="1.5" fill="#8f6146" opacity="0.5" />',
         '',
         '      <!-- =================================================== -->',
-        '      <!-- THE WORLD-FAMOUS ENIGMATIC SMILE (LA GIOCONDA)   -->',
+        '      <!-- LIVING ENIGMATIC SMILE (SUBTLE LIVING WARMTH)      -->',
         '      <!-- =================================================== -->',
-        '      <!-- Soft sfumato shadow at lip corners -->',
-        '      <circle cx="132" cy="167" r="2.2" fill="#86513a" opacity="0.5" />',
-        '      <circle cx="158" cy="166.5" r="2.2" fill="#86513a" opacity="0.5" />',
-        '      <!-- Upper Lip: Subtle Cupid\'s bow curving into slight upward smile -->',
-        '      <path d="M133 167 Q 140 164, 145 165 Q 150 164, 157 166.5" fill="none" stroke="#98533e" stroke-width="1.6" />',
-        '      <!-- Center Mouth Line: Gentle mysterious curve -->',
-        '      <path d="M132 167 Q 145 168.5, 158 166.5" fill="none" stroke="#5c2c1e" stroke-width="1.5" />',
-        '      <!-- Lower Lip: Softly rounded and highlighted -->',
-        '      <path d="M135 167.5 Q 145 174, 155 167" fill="#c47862" opacity="0.75" />',
-        '      <path d="M136 168 Q 145 173, 154 167.5" fill="none" stroke="#a45842" stroke-width="1.2" />',
-        '      <!-- Chin dimple shadow -->',
+        '      <g class="living-smile">',
+        '        <!-- Soft sfumato corner shadows -->',
+        '        <circle cx="132" cy="167" r="2.2" fill="#86513a" opacity="0.55" />',
+        '        <circle cx="158" cy="166.5" r="2.2" fill="#86513a" opacity="0.55" />',
+        '        <!-- Upper Lip with subtle enigmatic contour -->',
+        '        <path d="M133 167 Q 140 164, 145 165 Q 150 164, 157 166.5" fill="none" stroke="#98533e" stroke-width="1.6" />',
+        '        <!-- Center mouth line -->',
+        '        <path d="M132 167 Q 145 168.5, 158 166.5" fill="none" stroke="#5c2c1e" stroke-width="1.5" />',
+        '        <!-- Lower Lip with warm highlight -->',
+        '        <path d="M135 167.5 Q 145 174, 155 167" fill="#c47862" opacity="0.75" />',
+        '        <path d="M136 168 Q 145 173, 154 167.5" fill="none" stroke="#a45842" stroke-width="1.2" />',
+        '      </g>',
         '      <ellipse cx="145" cy="182" rx="7" ry="2.5" fill="#a46d50" opacity="0.3" />',
         '',
-        '      <!-- =================================================== -->',
-        '      <!-- MONA LISA\'S FAMOUS RESTING CROSSED HANDS          -->',
-        '      <!-- =================================================== -->',
+        '      <!-- Crossed Hands Resting on Balustrade -->',
         '      <g transform="translate(70, 315)">',
-        '        <!-- Right arm resting on chair balustrade -->',
         '        <path d="M15 35 C 30 15, 70 12, 115 15 C 130 16, 140 28, 135 45 C 110 50, 40 52, 15 35 Z" fill="url(#dress-fabric)" />',
-        '        <!-- Left hand placed over right wrist (the classic crossed posture) -->',
-        '        <!-- Delicate Renaissance Fingers -->',
         '        <path d="M60 20 C 75 14, 105 14, 130 18 C 138 20, 140 27, 135 32 C 110 33, 80 34, 60 20 Z" fill="url(#skin-hand)" />',
-        '        <!-- Forefinger & Middle fingers -->',
         '        <path d="M85 24 Q 115 22, 142 27 Q 138 33, 115 33 Z" fill="url(#skin-hand)" stroke="#9c6d4e" stroke-width="0.6" />',
         '        <path d="M80 30 Q 110 28, 138 34 Q 134 40, 110 39 Z" fill="url(#skin-hand)" stroke="#9c6d4e" stroke-width="0.6" />',
         '        <path d="M75 36 Q 105 35, 130 41 Q 126 46, 105 45 Z" fill="url(#skin-hand)" stroke="#9c6d4e" stroke-width="0.6" />',
         '      </g>',
         '    </g>',
-        '    <!-- Portrait Inner Border Frame Divider -->',
+        '    <!-- Portrait Divider Frame Line -->',
         '    <line x1="290" y1="0" x2="290" y2="380" stroke="#d5be8a" stroke-width="2" />',
         '    <line x1="292" y1="0" x2="292" y2="380" stroke="#3d280c" stroke-width="1" />',
         '  </g>',
         '',
         '  <!-- ============================================================== -->',
-        '  <!-- 5. GITHUB CONTRIBUTION GRAPH & STATS (THE DIGITAL CANVAS)     -->',
+        '  <!-- 5. GITHUB CONTRIBUTION GRAPH (THE DIGITAL OIL TAPESTRY)      -->',
         '  <!-- ============================================================== -->',
-        '  <!-- Top-Right "Contributions" Archival Box -->',
+        '  <!-- Top-Right "Contributions" Box -->',
         '  <g transform="translate(685, 82)">',
         '    <text x="0" y="0" class="section-title">Contributions</text>',
         '    <rect x="0" y="10" width="210" height="64" class="panel-box" />',
@@ -404,7 +525,7 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         f'    <text x="210" y="87" text-anchor="end" class="avg-text">Average: <tspan class="avg-bold">{avg_per_day:.2f}</tspan> / day</text>',
         '  </g>',
         '',
-        '  <!-- Bottom-Left "Streaks" Archival Box (beside Mona Lisa) -->',
+        '  <!-- Bottom-Left "Streaks" Box -->',
         '  <g transform="translate(395, 345)">',
         '    <text x="0" y="0" class="section-title">Streaks</text>',
         '    <rect x="0" y="10" width="202" height="64" class="panel-box" />',
@@ -468,6 +589,7 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
                 'depth': depth_order,
                 'x': bx, 'y': by,
                 'h': h,
+                'lvl': lvl,
                 'colors': cp
             })
             
@@ -481,22 +603,52 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
         x, y = p['x'], p['y']
         h = p['h']
         cp = p['colors']
+        lvl = p['lvl']
         
         pts_top = f"{x:.1f},{y - thr - h:.1f} {x + tr:.1f},{y - h:.1f} {x:.1f},{y + thr - h:.1f} {x - tr:.1f},{y - h:.1f}"
         pts_left = f"{x - tr:.1f},{y - h:.1f} {x:.1f},{y + thr - h:.1f} {x:.1f},{y + thr:.1f} {x - tr:.1f},{y:.1f}"
         pts_right = f"{x:.1f},{y + thr - h:.1f} {x + tr:.1f},{y - h:.1f} {x + tr:.1f},{y:.1f} {x:.1f},{y + thr:.1f}"
         
-        # Stationary, timeless, no auto-rotation
-        svg.append(f'    <polygon points="{pts_left}" fill="{cp["left"]}" />')
-        svg.append(f'    <polygon points="{pts_right}" fill="{cp["right"]}" />')
-        svg.append(f'    <polygon points="{pts_top}" fill="{cp["top"]}" />')
+        # High contribution pillars have subtle artistic emerald luminescence
+        extra_cls = ' class="emerald-pulse"' if lvl in ['THIRD_QUARTILE', 'FOURTH_QUARTILE'] else ''
+        svg.append(f'    <g{extra_cls}>')
+        svg.append(f'      <polygon points="{pts_left}" fill="{cp["left"]}" />')
+        svg.append(f'      <polygon points="{pts_right}" fill="{cp["right"]}" />')
+        svg.append(f'      <polygon points="{pts_top}" fill="{cp["top"]}" />')
+        svg.append('    </g>')
         
     svg.append('  </g>')
     svg.append('')
     
-    # 6. Polished Brass Museum Exhibition Plaque (Louvre Nameplate)
-    svg.append('  <!-- 6. Polished Brass Museum Exhibition Plaque -->')
+    # 6. Wet Oil Varnish Sheen Gliding Across the Entire Canvas
+    svg.append('  <!-- 6. Wet Oil Paint Varnish Glaze Wave Sweep -->')
+    svg.append('  <g clip-path="url(#canvas-bounds)">')
+    svg.append('    <defs>')
+    svg.append('      <clipPath id="canvas-bounds">')
+    svg.append('        <rect x="87" y="69" width="826" height="384" rx="2" />')
+    svg.append('      </clipPath>')
+    svg.append('    </defs>')
+    svg.append('    <rect class="oil-varnish-wave" x="0" y="69" width="280" height="384" fill="url(#oil-varnish-sheen)" pointer-events="none" />')
+    svg.append('  </g>')
+    svg.append('')
+    
+    # 7. Floating Golden Pigment Dust Particles in Museum Gallery Light
+    svg.append('  <!-- 7. Floating Golden Artist Pigment Particles -->')
+    svg.append('  <g pointer-events="none">')
+    svg.append('    <circle class="pigment-dust-1" cx="210" cy="180" r="1.5" fill="#fae79d" />')
+    svg.append('    <circle class="pigment-dust-2" cx="340" cy="220" r="1.8" fill="#ffd875" />')
+    svg.append('    <circle class="pigment-dust-3" cx="520" cy="190" r="1.4" fill="#fae79d" />')
+    svg.append('    <circle class="pigment-dust-1" cx="680" cy="240" r="1.6" fill="#ffd875" />')
+    svg.append('    <circle class="pigment-dust-2" cx="170" cy="290" r="1.3" fill="#fae79d" />')
+    svg.append('  </g>')
+    svg.append('')
+    
+    # 8. Polished Brass Museum Exhibition Plaque with Light Sheen
+    svg.append('  <!-- 8. Polished Brass Museum Exhibition Plaque -->')
     svg.append('  <g filter="url(#plaque-drop)" transform="translate(310, 504)">')
+    svg.append('    <clipPath id="plaque-clip">')
+    svg.append('      <rect x="0" y="0" width="380" height="42" rx="4" />')
+    svg.append('    </clipPath>')
     svg.append('    <rect x="0" y="0" width="380" height="42" rx="4" fill="url(#brass-grad)" stroke="#4a320d" stroke-width="1.2" />')
     svg.append('    <rect x="3" y="3" width="374" height="36" rx="2" fill="none" stroke="#fff4be" stroke-width="0.75" opacity="0.6" />')
     svg.append('    <!-- Brass Screws / Rivets -->')
@@ -504,6 +656,10 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
     svg.append('    <circle cx="372" cy="8" r="2.2" fill="#3a2508" /><circle cx="372" cy="8" r="1.3" fill="#fff4be" />')
     svg.append('    <circle cx="8" cy="34" r="2.2" fill="#3a2508" /><circle cx="8" cy="34" r="1.3" fill="#fff4be" />')
     svg.append('    <circle cx="372" cy="34" r="2.2" fill="#3a2508" /><circle cx="372" cy="34" r="1.3" fill="#fff4be" />')
+    svg.append('    <!-- Brass Metallic Light Sweep -->')
+    svg.append('    <g clip-path="url(#plaque-clip)">')
+    svg.append('      <rect class="brass-sheen" x="0" y="0" width="120" height="42" fill="url(#brass-sheen-sweep)" pointer-events="none" />')
+    svg.append('    </g>')
     svg.append('    <!-- Engraved Exhibition Inscription -->')
     svg.append('    <text x="190" y="18" text-anchor="middle" class="plaque-title">LEONARDO DA VINCI &amp; ANGKON NATH · "MONA LISA &amp; CODE"</text>')
     svg.append('    <text x="190" y="31" text-anchor="middle" class="plaque-sub">1503 – 2026 · Musée du Louvre, Salle des États · Git Heatmap on Canvas</text>')
@@ -513,7 +669,7 @@ def generate_mona_lisa_masterpiece(filename="isometric_contributions.svg"):
     with open(filename, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
         
-    print(f"Generated Authentic Mona Lisa Louvre Masterpiece -> {filename}")
+    print(f"Generated Living Handpainted Mona Lisa Masterpiece -> {filename}")
 
 if __name__ == "__main__":
-    generate_mona_lisa_masterpiece()
+    generate_handpainted_masterpiece_svg()
