@@ -79,20 +79,20 @@
 
 ---
 
-### 🖼️ 3D Isometric Contribution Masterpiece
+### 🏛️ The Louvre Masterpiece: "Code & Creation"
 
 <div align="center">
-  <a href="https://angkon101.github.io/angkon101/" target="_blank" title="Click to launch Interactive 3D Mode (Drag to Orbit)">
-    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="3D Isometric Contribution Masterpiece" width="100%" />
+  <a href="https://angkon101.github.io/angkon101/" target="_blank" title="Click to launch Interactive 3D Moveable Mode">
+    <img src="https://raw.githubusercontent.com/angkon101/angkon101/main/isometric_contributions.svg" alt="Classical Museum Framed Contribution Canvas (Louvre Edition)" width="100%" />
   </a>
 
   <p align="center" style="margin-top: 12px;">
     <a href="https://angkon101.github.io/angkon101/" target="_blank">
-      <img src="https://img.shields.io/badge/🎮_Launch_Interactive_3D-Moveable_Orbit_%26_Zoom-2ea043?style=for-the-badge&logo=three.js&logoColor=white" alt="Launch 3D Mode" />
+      <img src="https://img.shields.io/badge/🎮_Launch_3D_Moveable_Mode-Drag_Orbit_%26_Zoom-2ea043?style=for-the-badge&logo=three.js&logoColor=white" alt="Launch 3D Mode" />
     </a>
   </p>
   <p align="center">
-    <i>🖼️ <b>Static Canvas:</b> Sits gracefully like a gallery painting (no auto-rotation). <b>Click to explore</b> in 3D WebGL mode.</i>
+    <i>🏛️ <b>The Mona Lisa Aesthetic:</b> Sits still and poised in a classical gilded Louvre frame with ceiling spotlights and brass plaque — completely still with zero auto-rotation. <b>Click the painting</b> to grab with your mouse, rotate in 3D, and zoom in WebGL!</i>
   </p>
 </div>
 

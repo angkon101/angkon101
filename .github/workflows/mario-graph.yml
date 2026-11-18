@@ -31,11 +31,10 @@ jobs:
           python generate_minecraft.py
           python generate_3d_analytics.py
           python generate_game_skill_3d.py
-          python generate_360_rotation.py
-      - name: Push SVGs and 3D Assets
+      - name: Push SVGs and Masterpiece Assets
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add isometric_contributions.svg minecraft_contribution.svg analytics_3d.svg game_skill_3d.svg contributions_3d_360.gif
-          git commit -m "chore: update interactive profile and 3D assets [skip ci]" || echo "No changes"
+          git add isometric_contributions.svg minecraft_contribution.svg analytics_3d.svg game_skill_3d.svg
+          git commit -m "chore: update interactive profile and museum assets [skip ci]" || echo "No changes"
           git push
