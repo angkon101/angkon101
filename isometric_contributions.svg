@@ -390,13 +390,13 @@
     <text x="0" y="0" class="section-title">Contributions</text>
     <rect x="0" y="10" width="210" height="64" class="panel-box" />
     <line x1="105" y1="18" x2="105" y2="66" class="divider-line" />
-    <text x="14" y="34" class="stat-val">208</text>
+    <text x="14" y="34" class="stat-val">248</text>
     <text x="14" y="49" class="stat-label">Total</text>
     <text x="14" y="62" class="stat-date">Nov 16 → Present</text>
-    <text x="120" y="34" class="stat-val">24</text>
+    <text x="120" y="34" class="stat-val">26</text>
     <text x="120" y="49" class="stat-label">Best day</text>
     <text x="120" y="62" class="stat-date">Nov 8</text>
-    <text x="210" y="87" text-anchor="end" class="avg-text">Average: <tspan class="avg-bold">0.57</tspan> / day</text>
+    <text x="210" y="87" text-anchor="end" class="avg-text">Average: <tspan class="avg-bold">0.68</tspan> / day</text>
   </g>
 
   <!-- Bottom-Left "Streaks" Box -->
@@ -2109,9 +2109,9 @@
       <polygon points="792.8,335.4 799.4,338.7 792.8,342.0 786.2,338.7" fill="#ebedf0" />
     </g>
     <g>
-      <polygon points="891.5,334.2 898.1,337.5 898.1,347.8 891.5,344.5" fill="#82d890" />
-      <polygon points="898.1,337.5 904.7,334.2 904.7,344.5 898.1,347.8" fill="#6ec27b" />
-      <polygon points="898.1,330.9 904.7,334.2 898.1,337.5 891.5,334.2" fill="#9be9a8" />
+      <polygon points="891.5,330.9 898.1,334.2 898.1,347.8 891.5,344.5" fill="#82d890" />
+      <polygon points="898.1,334.2 904.7,330.9 904.7,344.5 898.1,347.8" fill="#6ec27b" />
+      <polygon points="898.1,327.6 904.7,330.9 898.1,334.2 891.5,330.9" fill="#9be9a8" />
     </g>
     <g>
       <polygon points="875.3,342.8 881.9,346.1 881.9,347.9 875.3,344.6" fill="#d0d7de" />
@@ -2184,9 +2184,9 @@
       <polygon points="898.1,326.4 904.7,329.7 898.1,333.0 891.5,329.7" fill="#40c463" />
     </g>
     <g>
-      <polygon points="875.3,342.3 881.9,345.6 881.9,355.9 875.3,352.6" fill="#82d890" />
-      <polygon points="881.9,345.6 888.5,342.3 888.5,352.6 881.9,355.9" fill="#6ec27b" />
-      <polygon points="881.9,339.0 888.5,342.3 881.9,345.6 875.3,342.3" fill="#9be9a8" />
+      <polygon points="875.3,339.0 881.9,342.3 881.9,355.9 875.3,352.6" fill="#82d890" />
+      <polygon points="881.9,342.3 888.5,339.0 888.5,352.6 881.9,355.9" fill="#6ec27b" />
+      <polygon points="881.9,335.7 888.5,339.0 881.9,342.3 875.3,339.0" fill="#9be9a8" />
     </g>
     <g>
       <polygon points="859.1,329.6 865.7,332.9 865.7,355.9 859.1,352.6" fill="#34a853" />
@@ -2213,10 +2213,10 @@
       <polygon points="890.0,358.2 896.6,354.9 896.6,356.7 890.0,360.0" fill="#afb8c1" />
       <polygon points="890.0,351.6 896.6,354.9 890.0,358.2 883.4,354.9" fill="#ebedf0" />
     </g>
-    <g>
-      <polygon points="867.2,333.7 873.8,337.0 873.8,360.0 867.2,356.7" fill="#34a853" />
-      <polygon points="873.8,337.0 880.4,333.7 880.4,356.7 873.8,360.0" fill="#2a8c44" />
-      <polygon points="873.8,330.4 880.4,333.7 873.8,337.0 867.2,333.7" fill="#40c463" />
+    <g class="emerald-pulse">
+      <polygon points="867.2,325.7 873.8,329.0 873.8,360.0 867.2,356.7" fill="#278841" />
+      <polygon points="873.8,329.0 880.4,325.7 880.4,356.7 873.8,360.0" fill="#1e6e34" />
+      <polygon points="873.8,322.4 880.4,325.7 873.8,329.0 867.2,325.7" fill="#30a14e" />
     </g>
     <g class="emerald-pulse">
       <polygon points="851.0,315.7 857.6,319.0 857.6,360.0 851.0,356.7" fill="#1a5c2f" />
@@ -2234,9 +2234,9 @@
       <polygon points="825.2,351.6 831.8,354.9 825.2,358.2 818.6,354.9" fill="#ebedf0" />
     </g>
     <g>
-      <polygon points="875.3,347.1 881.9,350.4 881.9,364.1 875.3,360.8" fill="#82d890" />
-      <polygon points="881.9,350.4 888.5,347.1 888.5,360.8 881.9,364.1" fill="#6ec27b" />
-      <polygon points="881.9,343.8 888.5,347.1 881.9,350.4 875.3,347.1" fill="#9be9a8" />
+      <polygon points="875.3,337.9 881.9,341.2 881.9,364.1 875.3,360.8" fill="#34a853" />
+      <polygon points="881.9,341.2 888.5,337.9 888.5,360.8 881.9,364.1" fill="#2a8c44" />
+      <polygon points="881.9,334.6 888.5,337.9 881.9,341.2 875.3,337.9" fill="#40c463" />
     </g>
     <g>
       <polygon points="859.1,358.9 865.7,362.2 865.7,364.0 859.1,360.7" fill="#d0d7de" />
@@ -2253,10 +2253,10 @@
       <polygon points="833.3,362.2 839.9,358.9 839.9,360.8 833.3,364.1" fill="#afb8c1" />
       <polygon points="833.3,355.6 839.9,358.9 833.3,362.2 826.7,358.9" fill="#ebedf0" />
     </g>
-    <g>
-      <polygon points="867.2,363.0 873.8,366.3 873.8,368.1 867.2,364.8" fill="#d0d7de" />
-      <polygon points="873.8,366.3 880.4,363.0 880.4,364.8 873.8,368.1" fill="#afb8c1" />
-      <polygon points="873.8,359.7 880.4,363.0 873.8,366.3 867.2,363.0" fill="#ebedf0" />
+    <g class="emerald-pulse">
+      <polygon points="867.2,333.8 873.8,337.1 873.8,368.1 867.2,364.8" fill="#278841" />
+      <polygon points="873.8,337.1 880.4,333.8 880.4,364.8 873.8,368.1" fill="#1e6e34" />
+      <polygon points="873.8,330.5 880.4,333.8 873.8,337.1 867.2,333.8" fill="#30a14e" />
     </g>
     <g>
       <polygon points="851.0,363.0 857.6,366.3 857.6,368.1 851.0,364.8" fill="#d0d7de" />
@@ -2264,9 +2264,14 @@
       <polygon points="857.6,359.7 864.2,363.0 857.6,366.3 851.0,363.0" fill="#ebedf0" />
     </g>
     <g>
-      <polygon points="834.8,354.5 841.4,357.8 841.4,368.1 834.8,364.8" fill="#82d890" />
-      <polygon points="841.4,357.8 848.0,354.5 848.0,364.8 841.4,368.1" fill="#6ec27b" />
-      <polygon points="841.4,351.2 848.0,354.5 841.4,357.8 834.8,354.5" fill="#9be9a8" />
+      <polygon points="834.8,351.2 841.4,354.5 841.4,368.1 834.8,364.8" fill="#82d890" />
+      <polygon points="841.4,354.5 848.0,351.2 848.0,364.8 841.4,368.1" fill="#6ec27b" />
+      <polygon points="841.4,347.9 848.0,351.2 841.4,354.5 834.8,351.2" fill="#9be9a8" />
+    </g>
+    <g>
+      <polygon points="859.1,360.8 865.7,364.1 865.7,372.2 859.1,368.9" fill="#82d890" />
+      <polygon points="865.7,364.1 872.3,360.8 872.3,368.9 865.7,372.2" fill="#6ec27b" />
+      <polygon points="865.7,357.4 872.3,360.8 865.7,364.1 859.1,360.8" fill="#9be9a8" />
     </g>
     <g>
       <polygon points="842.9,367.0 849.5,370.3 849.5,372.1 842.9,368.8" fill="#d0d7de" />
